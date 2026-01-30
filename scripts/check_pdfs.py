@@ -3,7 +3,6 @@ import json
 import subprocess
 import hashlib
 import requests
-import shlex
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse, quote
 
@@ -48,10 +47,18 @@ def get_pdf_links(url):
             href = a['href']
             clean_href = href.split('?')[0]
             if clean_href.lower().endswith('.pdf'):
-                # hrefを適切にエンコード
+                # URLを適切に構築
                 full_url = urljoin(url, href)
-                text = a.get_text(strip=True) or os.path.basename(urlparse(full_url).path)
-                links.append({'url': full_url, 'text': text})
+                # 日本語などの非ASCII文字が含まれる場合に備えて再エンコード
+                parsed = urlparse(full_url)
+                path = quote(parsed.path)
+                query = quote(parsed.query) if parsed.query else ""
+                encoded_url = f"{parsed.scheme}://{parsed.netloc}{path}"
+                if query:
+                    encoded_url += f"?{query}"
+                
+                text = a.get_text(strip=True) or os.path.basename(parsed.path)
+                links.append({'url': encoded_url, 'text': text})
         return links
     except Exception as e:
         print(f"Error fetching {url}: {e}")
@@ -60,13 +67,11 @@ def get_pdf_links(url):
 def download_pdf_with_curl(url, filename, referer):
     path = os.path.join(DOWNLOAD_DIR, filename)
     try:
-        # curlコマンドを構築
         cmd = [
             'curl', '-L', '-A', USER_AGENT,
             '-H', f'Referer: {referer}',
             url, '-o', path
         ]
-        # subprocess.runでリスト形式で渡すことでシェルのエスケープ問題を回避
         subprocess.run(cmd, check=True, capture_output=True)
         
         if is_valid_pdf(path):

@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>å®ç¸¾å ±åã»ç²¾ç®æè«æ±æå¼ã</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8fafc; }
+        .card { background: white; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .accent-bar { height: 4px; background: linear-gradient(90deg, #3b82f6, #2563eb); border-radius: 1rem 1rem 0 0; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl font-bold text-slate-800 mb-2">å®ç¸¾å ±åã»ç²¾ç®æè«æ±æå¼ã</h1>
+            <p class="text-slate-500">資料の要約と重要ポイントのまとめ</p>
+        </header>
+
+        <main class="space-y-6">
+            <section class="card overflow-hidden">
+                <div class="accent-bar"></div>
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-blue-700 mb-4">概要</h2>
+                    <div class="prose text-slate-700 leading-relaxed">
+                        実績報告・精算請求手引き資料は、業務完了後の報告および経費精算手続きの流れをわかりやすく解説しています。正確な報告と適切な請求処理を実施することで、スムーズな業務締め切りと早期支払いを実現します。社内ルールに沿った報告書作成のポイントも詳述しています。
+                    </div>
+                </div>
+            </section>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <section class="card overflow-hidden">
+                    <div class="accent-bar bg-green-500"></div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold text-green-700 mb-4">重要ポイント</h2>
+                        <ul class="list-disc list-inside space-y-2 text-slate-700">
+                            <li>実績報告の提出期限とフォーマットの遵守</li><li>請求書作成時の必要項目の確認（契約番号、金額明細など）</li><li>精算に必要な証憑資料の添付</li><li>承認フローの把握と関係部署との連携強化</li><li>不備発見時の迅速な修正対応</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="card overflow-hidden">
+                    <div class="accent-bar bg-orange-500"></div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold text-orange-700 mb-4">注意点・締切</h2>
+                        <ul class="list-disc list-inside space-y-2 text-slate-700">
+                            <li>提出期限の遅延は支払い遅延の原因となる</li><li>不完全な書類は再提出を求められる可能性が高い</li><li>証憑が不足している場合、請求が認められないことがある</li><li>承認者不在や連絡不備による処理遅延に注意</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <section class="card overflow-hidden">
+                <div class="accent-bar bg-purple-500"></div>
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-purple-700 mb-4">次のアクション</h2>
+                    <div class="prose text-slate-700">
+                        <ul><li>実績報告書と請求書のチェックリストを作成・活用する</li><li>提出前に上司または関係部署に内容確認を依頼する</li><li>証憑の整理とデジタル保存を徹底し、紛失を防ぐ</li><li>社内の締切・承認ルールを定期的に見直す</li><li>不明点は早期に担当者へ問い合わせを行う</li></ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-12 text-center text-slate-400 text-sm">
+            <p>元資料: <a href="https://www.jizokukanb.com/jizokuka_r6h/app_sys/manual/tebiki/17/å®ç¸¾å ±åã»ç²¾ç®æè«æ±æå¼ã.pdf" class="text-blue-500 hover:underline" target="_blank">こちらをクリック</a></p>
+            <p class="mt-2">&copy; 2026 Manus Infographic Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

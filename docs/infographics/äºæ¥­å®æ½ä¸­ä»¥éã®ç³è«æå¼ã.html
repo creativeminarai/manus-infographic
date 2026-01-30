@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>äºæ¥­å®æ½ä¸­ä»¥éã®ç³è«æå¼ã</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8fafc; }
+        .card { background: white; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .accent-bar { height: 4px; background: linear-gradient(90deg, #3b82f6, #2563eb); border-radius: 1rem 1rem 0 0; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl font-bold text-slate-800 mb-2">äºæ¥­å®æ½ä¸­ä»¥éã®ç³è«æå¼ã</h1>
+            <p class="text-slate-500">資料の要約と重要ポイントのまとめ</p>
+        </header>
+
+        <main class="space-y-6">
+            <section class="card overflow-hidden">
+                <div class="accent-bar"></div>
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-blue-700 mb-4">概要</h2>
+                    <div class="prose text-slate-700 leading-relaxed">
+                        事業実施中における各種手続きでは、期限内の申請が重要です。適切な申請手続きを行うことで、法令遵守や補助金獲得の可能性が高まります。本資料では申請時の留意点と重要な期限について解説します。
+                    </div>
+                </div>
+            </section>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <section class="card overflow-hidden">
+                    <div class="accent-bar bg-green-500"></div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold text-green-700 mb-4">重要ポイント</h2>
+                        <ul class="list-disc list-inside space-y-2 text-slate-700">
+                            <li>申請書類は正確かつ期限内に提出することが必要</li><li>書類不備があると申請が却下されるリスクが高まる</li><li>各種助成金や補助金の申請締切を事前に把握しておく</li><li>進捗状況の報告や追加資料の提出が求められる場合がある</li><li>オンライン申請と郵送申請の両方の方法を確認する</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="card overflow-hidden">
+                    <div class="accent-bar bg-orange-500"></div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold text-orange-700 mb-4">注意点・締切</h2>
+                        <ul class="list-disc list-inside space-y-2 text-slate-700">
+                            <li>申請締切を過ぎると手続きが無効になる</li><li>不備修正の猶予がない場合もあるため、早めの準備が必要</li><li>申請内容に虚偽があると法的責任を問われる可能性がある</li><li>必要書類の抜け漏れがあると、手続きが遅延する</li><li>申請後の連絡を見落とさないよう、連絡先の確認を徹底する</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <section class="card overflow-hidden">
+                <div class="accent-bar bg-purple-500"></div>
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-purple-700 mb-4">次のアクション</h2>
+                    <div class="prose text-slate-700">
+                        <p>① 申請書類のチェックリストを作成し、必要項目を網羅する</p><p>② 申請締切日をプロジェクト管理ツールに登録し、リマインド機能を活用する</p><p>③ 申請書類の事前チェックと社内レビューを実施する</p><p>④ 申請後の受領確認を担当者に依頼し、フォローアップ体制を準備する</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-12 text-center text-slate-400 text-sm">
+            <p>元資料: <a href="https://www.jizokukanb.com/jizokuka_r6h/app_sys/manual/tebiki/17/äºæ¥­å®æ½ä¸­ä»¥éã®ç³è«æå¼ã.pdf" class="text-blue-500 hover:underline" target="_blank">こちらをクリック</a></p>
+            <p class="mt-2">&copy; 2026 Manus Infographic Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

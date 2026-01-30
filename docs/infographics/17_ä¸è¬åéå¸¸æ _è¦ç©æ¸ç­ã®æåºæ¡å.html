@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>è¦ç©æ¸ç­ã®æåºæ¡å</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8fafc; }
+        .card { background: white; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .accent-bar { height: 4px; background: linear-gradient(90deg, #3b82f6, #2563eb); border-radius: 1rem 1rem 0 0; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl font-bold text-slate-800 mb-2">è¦ç©æ¸ç­ã®æåºæ¡å</h1>
+            <p class="text-slate-500">資料の要約と重要ポイントのまとめ</p>
+        </header>
+
+        <main class="space-y-6">
+            <section class="card overflow-hidden">
+                <div class="accent-bar"></div>
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-blue-700 mb-4">概要</h2>
+                    <div class="prose text-slate-700 leading-relaxed">
+                        当資料は、補償書などの提出案について解説し、効率的かつ正確な書類提出を支援します。提出前の注意点や必要書類の整理方法、期限遵守の重要性を詳述し、ビジネスシーンでのトラブル防止を目的としています。
+                    </div>
+                </div>
+            </section>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <section class="card overflow-hidden">
+                    <div class="accent-bar bg-green-500"></div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold text-green-700 mb-4">重要ポイント</h2>
+                        <ul class="list-disc list-inside space-y-2 text-slate-700">
+                            <li>提出書類の種類と役割の明確化</li><li>必要書類の事前準備とチェックリストの活用</li><li>提出期限の厳守が信頼構築に繋がる</li><li>電子提出と紙提出の違い及び注意点</li><li>不備があった場合の対応プロセス</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="card overflow-hidden">
+                    <div class="accent-bar bg-orange-500"></div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold text-orange-700 mb-4">注意点・締切</h2>
+                        <ul class="list-disc list-inside space-y-2 text-slate-700">
+                            <li>提出期限を過ぎると受理されない場合がある</li><li>書類の不備や誤記入は処理遅延の原因となる</li><li>補償内容を正確に記載しなければ補償が受けられないこともある</li><li>提出方法により必要な添付書類が変わる場合がある</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <section class="card overflow-hidden">
+                <div class="accent-bar bg-purple-500"></div>
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-purple-700 mb-4">次のアクション</h2>
+                    <div class="prose text-slate-700">
+                        <ul><li>提出書類の正確な確認と準備</li><li>期限を守るためのスケジューリング</li><li>不明点は担当部署へ事前に問い合わせる</li><li>電子申請の場合は推奨ブラウザの確認と動作検証を行う</li></ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-12 text-center text-slate-400 text-sm">
+            <p>元資料: <a href="https://www.jizokukanb.com/jizokuka_r6h/doc/manual/r6_17/17_ä¸è¬åéå¸¸æ _è¦ç©æ¸ç­ã®æåºæ¡å.pdf" class="text-blue-500 hover:underline" target="_blank">こちらをクリック</a></p>
+            <p class="mt-2">&copy; 2026 Manus Infographic Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

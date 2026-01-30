@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>小規模事業者持続化補助金【一般型・通常枠】&nbsp;&nbsp;Top</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+<link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+<link rel="stylesheet" href="css/nav2.css">
+<link rel="stylesheet" href="css/button.css?0710">
+<link rel="stylesheet" href="css/normalize.min.css">
+<link rel="stylesheet" href="css/main.css?0327">
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script src="js/view_timer.js"></script> 
+<!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KV2N7PX7P0"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KV2N7PX7P0');
+	</script>
+</head>
+<body id="top">
+<!--▼logo--------------------------------------------------------------------------------------->
+<div id="header">
+  <div id="logo">
+    <div class="row" align="right">
+      <div class="logo"><font color="#fff"size="+0">商工会地区<br>
+        小規模事業者持続化補助金事務局</font></div>
+    </div>
+  </div>
+  <!--▼サイト名--------------------------------------------------------------------------------------->
+  <div class="row">
+<p></p>
+	  <span class="view_timer" data-start-date="2025/6/17 14:00">
+		  <a href="furankisei/" target="_blank"><img src="img/f_banner_r.png" width="100%"></a>
+	  </span>
+
+    <div class="nine cols">
+      <h1>小規模事業者持続化補助金</h1>
+      <!--<table border="0" cellpadding="5">
+  <tbody>
+    <tr>
+		<td width="250" align="left"><p class="lead2">一般型・通常枠</p></td>
+		<td width="150" align="center" valign="middle">&nbsp;</td>
+		<td width="120" align="center" valign="middle"><div  class=""><font size="-1"><a href="../jizokuka_r1h/1-7/">1回目～7回目<br>公募はこちら</a></font></div></td>
+		<td width="120" align="center" valign="middle"><div  class=""><font size="-1"><a href="../jizokuka_r1h/">8回目～16回目<br>公募はこちら</a></font></div></td>
+		<td width="120"><br><p class="link-r1"><a href="https://www.jizokuka-konendo.jp/" target="_blank" class="button_ko">＜一般型＞補助金を受給後の手続きはこちら</a></p></td>
+    </tr>
+
+  </tbody>
+</table>--> 
+      <!--2025変更部分-->
+      <p class="lead2">一般型・通常枠</p>
+      <div id="menu2">
+        <li><a href="../jizokuka_r1h/1-7/">1回目～7回目<br class="brsp">
+          公募はこちら</a></li>
+        <li><a href="../jizokuka_r1h/">8回目～16回目<br class="brsp">
+          公募はこちら</a></li>
+        <li class="end"><a href="https://www.jizokuka-konendo.jp/">＜一般型＞補助金を受給後の手続きはこちら</a></li>
+      </div>
+    </div>
+    <div class="three cols">
+      <div id="linkarea"><br class="brsp">
+        <p>&emsp;</p>
+        <br>
+        <!-- <a class="button2" href="shinsei.html#yosiki">公募要領・様式</a> <a class="button2" href="app_sys">電子申請</a>//--></div>
+      
+      <!--
+      <div class="asta">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<font color=red>※　電子準備中</font></div>
+//--> 
+      <!--2025変更部分-->
+      <div class="linkbox"><!--class追加-->
+        <p class="link-r1"> <strong>災害支援枠(令和６年能登半島地震)</strong><br>
+          <a href="../jizokuka_r1h/noto">1次～5次&nbsp;はこちら</a><br>
+          <a href="saigai/">6次以降はこちら</a></p>
+        <!--<br>削除--> 
+      </div>
+    </div>
+    <div class="twelve cols">
+      <div class="top"></div>
+    </div>
+  </div>
+  <!--グローバルナビ-->
+  <div id="gnavi">
+    <div class="row">
+      <div class="twelve cols">
+        <ul id="menu">
+          <div class="clearfix">
+            <li><a id="top-n" href="index.html">TOP</a></li>
+            <li><a id="jizoku-n" href="jizokuka.html">持続化補助金とは</a></li>
+            <li><a id="shinsei-n" href="shinsei.html">申請について</a></li>
+            <li><a id="ichiran-n" href="ichiran.html">採択者一覧</a></li>
+            <li><a id="info-n" href="info.html">採択者向け情報</a></li>
+            <li><a id="question-n" href="m_question.html">よくあるご質問</a></li>
+            <li class="end"><a href="https://www12.shokokai.or.jp/hpsearch/top/php/shokokai_websearch.php" target="_blank" id="toi-n">問い合わせ先</a></li>
+          </div>
+        </ul>
+      </div>
+      <!--<▲/twelve cols>--> 
+    </div>
+    <!--<▲/row>--> 
+  </div>
+  <!--<▲/gnavi-idEND>--> 
+</div>
+<!--SP用-------------------------------------------------------------------------------->
+<div id="toggle">
+  <div class="row">
+    <div class="twelve cols">
+      <div class="hamburger"> <span></span> <span></span> <span></span> </div>
+      <nav class="globalMenuSp">
+        <ul>
+          <li><a href="index.html">TOP</a></li>
+          <li><a href="jizokuka.html">持続化補助金とは</a></li>
+          <li><a href="shinsei.html">申請について</a></li>
+          <li><a href="ichiran.html">採択者一覧<!--<font color=red>（準備中）</font>//--></a></li>
+          <li><a href="info.html">採択者向け情報<!--<font color=red>（準備中）</font>//--></a></li>
+          <li><a href="m_question.html">よくあるご質問</a><!--<font color=red>（準備中）</font>//--></li>
+          <li><a href="https://www12.shokokai.or.jp/hpsearch/top/php/shokokai_websearch.php" target="_blank">問い合わせ先</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<!--SP用/END----------------------------------------------------------------------->
+<div id="main">
+  <div class="row"> 
+    <!--
+	  	<div align="right"><font size="-1">↑商工会地区の方：<br>
+		全国各地の商工会WEBサーチ</font><br>
+		<font size="-1" color="red">※地域・所轄が不明の方：<br>
+			「03-6634-9307」にお問い合わせください。</font>
+	  </div>
+//--->
+    <div class="twelve cols"> 
+      <!--
+	      <h2>小規模事業者持続化補助金の申請をされた事業者の皆様へ</h2>
+	  <p>&emsp;</p>
+//-->
+      
+      <h2>事務局からのお知らせ・ご注意</h2>
+      <p class="inden">①このＷＥＢサイトは、商工会の管轄地域で事業を営んでいる小規模事業者等が対象です。<br>
+        <br>
+        公募受付先及びお問い合わせ先<br>
+      <div class="row">
+        <div class="one cols"></div>
+        <div class="four cols"><a href="https://www12.shokokai.or.jp/hpsearch/top/php/shokokai_websearch.php" target="_blank" class="button">商工会地域の方はこちら</a> </div>
+        <div class="four cols"><a href="https://r6.jizokukahojokin.info/" target="_blank" class="button">商工会議所地域の方はこちら</a>
+          <p class="blok">※&nbsp;<strong>商工会議所の管轄地域で事業を<br>
+            &emsp;&nbsp;営んでいる小規模事業者等</strong>については、<br>
+            &emsp;&nbsp;商工会議所地区事務局に<br>
+            &emsp;&nbsp;お問い合わせください</p>
+        </div>
+        <div class="three cols">
+          <div align="center" style="background: #9BDEFB">地域・所轄が不明な方は、<br>
+            以下にお問い合わせください。<br>
+            <br>
+            03-6634-9307</div>
+        </div>
+      </div>
+      <p class="inden" style="margin-bottom: 5px">②締切回で補助金の名称が変わります。<br>
+      <li style="margin-left: 40px">第&ensp;1回～第&ensp;7回受付締切分：令和元年度補正予算　小規模事業者持続化補助金＜一般型＞</li>
+      <li style="margin-left: 40px">第&ensp;8回～第11回受付締切分：令和元年度補正予算・令和3年度補正予算小規模事業者持続化補助金＜一般型＞</li>
+      <li style="margin-left: 40px">第12回～第16回受付締切分：小規模事業者持続化補助金＜一般型＞</li>
+      <li style="margin-left: 40px">第17回以降の受付締切分：小規模事業者持続化補助金＜一般型・通常枠＞</li>
+      </p>
+      <p class="inden">③持続化補助金の交付決定を受けた事業者等を対象に、ＦＡＸ、メール、ホームページ等で持続化補助金の額に上乗せした補助金を支払うなどと案内し、持続化補助金に係る交付申請書、事業計画書、交付決定通知書などを応募書類として添付させ、審査手数料として印紙の送付を請求する団体があることについて、事業者等から当事務局に対して複数の問い合わせが寄せられています。
+        この団体は、中小企業庁、中小企業基盤整備機構及び当事務局とは一切関係がありません。
+        また、これらのＦＡＸや勧誘等に関連して生じるトラブル等について、当事務局は一切責任を負いません。</p>
+      <!--新着情報----------------------------------------------------------------------->
+      <h2>新着情報</h2>
+      <div class="newbox1">
+        <ul>
+		  <li>&nbsp;&nbsp;1月28日：<a href="shinsei.html#kobo"><strong>第19回公募要領第5版</strong></a>が公開されました。</li>
+          <li>10月&nbsp;&nbsp;3日：<a href="shinsei.html#densi"><strong>第18回電子申請システム</strong></a>が公開されました。</li>
+          <li>&nbsp;&nbsp;9月29日：<a href="shinsei.html#kobo"><strong>第18回公募要領第4版、公募要領新旧対照表、参考資料、ガイドブック、よくあるご質問</strong></a>が公開されました。</li>
+		  <li>&nbsp;&nbsp;9月26日：<a href="ichiran.html#saitaku"><strong>第17回受付締切分採択者一覧</strong></a>を公開しました。<br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="info.html#kobo"><strong>第17回採択者向け補助事業の手引き</strong></a>を公開しました。</li>
+		  <li>&nbsp;&nbsp;8月19日：第17回公募においては、大変多くの申請が寄せられたため、採択発表を9月下旬に予定しております。<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;何卒ご理解賜りますようお願い申し上げます。</li>
+          <li>&nbsp;&nbsp;6月30日：<a href="shinsei.html#kobo">第18回&nbsp;&nbsp;交付規程・公募要領</a>が公開されました。</li>
+          <li>&nbsp;&nbsp;5月&nbsp;&nbsp;1日：第17回電子申請システムが公開されました。</li>
+          <li>&nbsp;&nbsp;4月25日：第17回公募要領第2版、公募要領の主な変更点、よくあるご質問、ガイドブック、参考資料、交付規程が公開されました。</li>
+          <li>&nbsp;&nbsp;3月4日：第17回公募要領が公開されました。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- フッター -->
+  <footer>
+    <div id="fbar">
+      <div class="row collapse">
+        <div class="twelve cols clearfix">
+          <p class="f-sho">Copyright 2025 newsbase.inc.All Rights Reserved.</p>
+          <div id="page_top"><a href="#top"></a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.6.0.min.js"><\/script>')</script> 
+<script src="js/main.js"></script>
+</body>
+</html>

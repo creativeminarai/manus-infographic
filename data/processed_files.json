@@ -5,5 +5,167 @@
     "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_19kobo.pdf",
     "processed": true,
     "infographic_path": "infographics/doc_19kobo.html"
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_kitei_tsujyo.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_kitei_tsujyo.pdf",
+    "text": "ãã¦ã³ã­ã¼ãDownload icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_1c583015ce.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_koubo_tsujyo.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_koubo_tsujyo.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_7946a42c54.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_kitei_invoice.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_kitei_invoice.pdf",
+    "text": "ãã¦ã³ã­ã¼ãDownload icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_9078434650.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_koubo_invoice.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_koubo_invoice.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_d3a9bb8a76.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_kitei_denshi.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_kitei_denshi.pdf",
+    "text": "ãã¦ã³ã­ã¼ãDownload icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_2cd667aa22.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_koubo_denshi.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_koubo_denshi.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_b70c810a58.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_kitei_security.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_kitei_security.pdf",
+    "text": "ãã¦ã³ã­ã¼ãDownload icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_bebca5ed25.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_koubo_security.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_koubo_security.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_24945566c2.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_kitei_fukusu.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_kitei_fukusu.pdf",
+    "text": "ãã¦ã³ã­ã¼ãDownload icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_955b73e6d5.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_koubo_fukusu.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_koubo_fukusu.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_54ac9dd8f4.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_manual_kofu.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_manual_kofu.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_2fcea974a0.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_manual_kofu_fukusu.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_manual_kofu_fukusu.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_3f14b6172a.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_kakuninjikou_jisseki.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_kakuninjikou_jisseki.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_267b3badf1.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_manual_jisseki.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_manual_jisseki.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_4fd3cd3c50.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_manual_jisseki_fukusu.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_manual_jisseki_fukusu.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_903efcc4c5.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_manual_kouka_fukusu.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_manual_kouka_fukusu.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_f3f44ab800.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_manual_konen.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_manual_konen.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_41ceb7d871.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_touroku_it_tool.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_touroku_it_tool.pdf",
+    "text": "ãã¦ã³ã­ã¼ãDownload icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_ec04d94f23.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_manual_it_tool.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_manual_it_tool.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_4bf1b5ac17.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_kakuninjikou_it.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_kakuninjikou_it.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_d2d2de267b.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_touroku_it_jigyosha.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_touroku_it_jigyosha.pdf",
+    "text": "ãã¦ã³ã­ã¼ãDownload icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_942147fee0.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_manual_it_jigyosha.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_manual_it_jigyosha.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_95225307fd.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_manual_preregistration.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_manual_preregistration.pdf",
+    "text": "ãã¦ã³ã­ã¼ãDownload icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_7044cb3624.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_registration.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_registration.pdf",
+    "text": "ãã¦ã³ã­ã¼ãDownload icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_f480f76be2.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_it_vendor_list.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_it_vendor_list.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_82890d9d32.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_it_consortium_list.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_it_consortium_list.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_3e0a267223.pdf",
+    "processed": false
+  },
+  "https://it-shien.smrj.go.jp/pdf/it2026_addition_list.pdf": {
+    "url": "https://it-shien.smrj.go.jp/pdf/it2026_addition_list.pdf",
+    "text": "æºåä¸­Download icon",
+    "local_path": "/home/ubuntu/manus-infographic/data/downloads/doc_1d1b5e4440.pdf",
+    "processed": false
   }
 }

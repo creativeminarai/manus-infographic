@@ -1,6 +1,7 @@
 import os
 import json
 import requests
+import hashlib
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 
@@ -67,19 +68,12 @@ def main():
             pdf_url = link['url']
             if pdf_url not in processed:
                 print(f"New PDF found: {pdf_url}")
-                filename = os.path.basename(urlparse(pdf_url).path)
-                if not filename:
-                    filename = "document.pdf"
                 
-                # 重複回避のためのリネーム
-                base, ext = os.path.splitext(filename)
-                counter = 1
-                unique_filename = filename
-                while os.path.exists(os.path.join(DOWNLOAD_DIR, unique_filename)):
-                    unique_filename = f"{base}_{counter}{ext}"
-                    counter += 1
+                # URLから一意のID（ハッシュ）を生成してファイル名にする
+                url_hash = hashlib.md5(pdf_url.encode()).hexdigest()[:10]
+                filename = f"doc_{url_hash}.pdf"
                 
-                local_path = download_pdf(pdf_url, unique_filename)
+                local_path = download_pdf(pdf_url, filename)
                 if local_path:
                     entry = {
                         'url': pdf_url,

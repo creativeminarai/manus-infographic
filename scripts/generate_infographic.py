@@ -1,6 +1,5 @@
 import os
 import json
-import base64
 from openai import OpenAI
 
 client = OpenAI()
@@ -85,15 +84,7 @@ HTML_TEMPLATE = """
 </html>
 """
 
-def extract_text_from_pdf(pdf_path):
-    # ここでは簡易的にファイル名から推測するか、
-    # 実際にはpdf2imageやLLMの画像認識などを使うのが理想的ですが、
-    # 今回はLLMにPDFのコンテキスト（ファイル名やテキスト情報）を渡して生成させます。
-    # 実際にはManusの能力を活用して、PDFの内容を読み取ります。
-    # ここではスクリプトからLLMを叩く形にします。
-    return f"PDF File: {os.path.basename(pdf_path)}"
-
-def generate_infographic_content(pdf_text, title):
+def generate_infographic_content(title):
     prompt = f"""
     以下の資料タイトルに基づき、ビジネス向けのインフォグラフィックHTML用のコンテンツを生成してください。
     タイトル: {title}
@@ -124,11 +115,12 @@ def main():
             print(f"Generating infographic for {data['text']}...")
             
             # コンテンツ生成
-            content = generate_infographic_content(data['local_path'], data['text'])
+            content = generate_infographic_content(data['text'])
             
-            # HTML作成
-            filename = os.path.basename(data['local_path']).replace('.pdf', '.html')
-            html_path = os.path.join(INFOGRAPHIC_DIR, filename)
+            # HTML作成 (PDFのファイル名に基づいてHTMLファイル名を決定)
+            pdf_filename = os.path.basename(data['local_path'])
+            html_filename = pdf_filename.replace('.pdf', '.html')
+            html_path = os.path.join(INFOGRAPHIC_DIR, html_filename)
             
             html_content = HTML_TEMPLATE.format(
                 title=data['text'],
@@ -143,7 +135,7 @@ def main():
                 f.write(html_content)
             
             data['processed'] = True
-            data['infographic_path'] = f"infographics/{filename}"
+            data['infographic_path'] = f"infographics/{html_filename}"
 
     with open(PROCESSED_FILE, 'w', encoding='utf-8') as f:
         json.dump(processed, f, ensure_ascii=False, indent=2)

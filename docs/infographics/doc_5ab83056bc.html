@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>å¥ç´ãåèè³æã</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8fafc; }
+        .card { background: white; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .accent-bar { height: 4px; background: linear-gradient(90deg, #3b82f6, #2563eb); border-radius: 1rem 1rem 0 0; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl font-bold text-slate-800 mb-2">å¥ç´ãåèè³æã</h1>
+            <p class="text-slate-500">資料の要約と重要ポイントのまとめ</p>
+        </header>
+
+        <main class="space-y-6">
+            <section class="card overflow-hidden">
+                <div class="accent-bar"></div>
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-blue-700 mb-4">概要</h2>
+                    <div class="prose text-slate-700 leading-relaxed">
+                        本資料は、カテゴリー別に整理された「参考資料」に関する情報をまとめています。ビジネスの各領域で活用できる信頼性の高いデータや文献を提供し、効果的な意思決定や戦略策定に役立てることを目的としています。重要なポイントや注意点を明確にし、実務に活かせる具体的なアクションを推奨します。
+                    </div>
+                </div>
+            </section>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <section class="card overflow-hidden">
+                    <div class="accent-bar bg-green-500"></div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold text-green-700 mb-4">重要ポイント</h2>
+                        <ul class="list-disc list-inside space-y-2 text-slate-700">
+                            <li>情報はカテゴリー別に分かれており、必要な資料を迅速に検索可能。</li><li>信頼できるデータソースのみを厳選し、品質を担保。</li><li>資料は最新の情報にアップデートされているため、現状分析に有効。</li><li>ビジネス課題やプロジェクトに合わせた活用例を提示。</li><li>多様なフォーマット（PDF、エクセル、動画など）で提供。</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="card overflow-hidden">
+                    <div class="accent-bar bg-orange-500"></div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold text-orange-700 mb-4">注意点・締切</h2>
+                        <ul class="list-disc list-inside space-y-2 text-slate-700">
+                            <li>資料の利用期限や更新日を必ず確認すること。</li><li>データの二次利用時には著作権等の規約に注意。</li><li>古い資料は補足情報を確認し、不整合がないかを検証。</li><li>提供元の信頼性を定期的に見直す必要がある。</li><li>資料を誤用すると誤った意思決定につながる可能性。</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <section class="card overflow-hidden">
+                <div class="accent-bar bg-purple-500"></div>
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-purple-700 mb-4">次のアクション</h2>
+                    <div class="prose text-slate-700">
+                        <ul><li>必要なカテゴリーの資料をリストアップし、担当者と共有。</li><li>参考資料の活用方法について社内ワークショップを開催。</li><li>定期的な資料更新スケジュールを設定し管理。</li><li>資料に基づく分析結果を会議で報告し、意思決定に反映。</li><li>データ権利や使用条件を確認し、法的リスクを回避。</li></ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-12 text-center text-slate-400 text-sm">
+            <p>元資料: <a href="https://www.jizokukanb.com/jizokuka_r6h/doc/kobo/r6_17/ä¸è¬å_2_å¥ç´_åèè³æ.pdf" class="text-blue-500 hover:underline" target="_blank">こちらをクリック</a></p>
+            <p class="mt-2">&copy; 2026 Manus Infographic Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

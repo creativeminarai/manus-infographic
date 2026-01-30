@@ -1,6 +1,7 @@
 import os
 import json
 import subprocess
+import markdown
 from openai import OpenAI
 
 client = OpenAI()
@@ -20,119 +21,138 @@ HTML_TEMPLATE = """
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {{ font-family: 'Noto Sans JP', sans-serif; background-color: #f1f5f9; color: #1e293b; }}
-        .gradient-bg {{ background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }}
-        .card {{ background: white; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0; }}
-        .section-title {{ border-left: 4px solid #3b82f6; padding-left: 1rem; margin-bottom: 1.5rem; font-weight: 700; color: #1e3a8a; }}
-        .badge {{ display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600; }}
-        .badge-blue {{ background-color: #dbeafe; color: #1e40af; }}
-        .prose h3 {{ font-size: 1.25rem; font-weight: 700; color: #1e3a8a; margin-top: 1.5rem; margin-bottom: 0.75rem; }}
-        .prose p {{ margin-bottom: 1rem; line-height: 1.7; }}
-        .prose ul {{ list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }}
-        .prose li {{ margin-bottom: 0.5rem; }}
+        body {{ font-family: 'Noto Sans JP', sans-serif; background-color: #f8fafc; color: #1e293b; }}
+        .gradient-bg {{ background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%); }}
+        .card {{ background: white; border-radius: 1.25rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); border: 1px solid #f1f5f9; }}
+        .section-title {{ border-left: 5px solid #3b82f6; padding-left: 1.25rem; margin-bottom: 1.5rem; font-weight: 700; color: #0f172a; font-size: 1.5rem; }}
+        
+        /* Markdown Content Styling */
+        .content-area h3 {{ font-size: 1.25rem; font-weight: 700; color: #1e40af; margin-top: 2rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }}
+        .content-area h3::before {{ content: '●'; font-size: 0.8rem; color: #3b82f6; }}
+        .content-area p {{ margin-bottom: 1.25rem; line-height: 1.8; color: #334155; }}
+        .content-area ul {{ list-style: none; padding-left: 0.5rem; margin-bottom: 1.5rem; }}
+        .content-area li {{ position: relative; padding-left: 1.75rem; margin-bottom: 0.75rem; line-height: 1.6; }}
+        .content-area li::before {{ content: '\\f058'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; left: 0; color: #10b981; }}
+        
+        /* Sidebar Specific Styling */
+        .sidebar-area ul {{ list-style: none; padding: 0; }}
+        .sidebar-area li {{ position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem; font-size: 0.875rem; }}
+        .sidebar-area li::before {{ content: '→'; position: absolute; left: 0; color: #3b82f6; font-weight: bold; }}
+        
+        .timeline-item {{ border-left: 2px dashed #cbd5e1; padding-left: 1.5rem; position: relative; margin-bottom: 1.5rem; }}
+        .timeline-item::after {{ content: ''; width: 12px; height: 12px; background: #3b82f6; border-radius: 50%; position: absolute; left: -7px; top: 5px; }}
     </style>
 </head>
-<body class="py-8 px-4 md:px-0">
-    <div class="max-w-5xl mx-auto">
+<body class="py-12 px-4 md:px-6">
+    <div class="max-w-6xl mx-auto">
         <!-- Header -->
-        <header class="gradient-bg rounded-2xl p-8 mb-8 text-white shadow-lg relative overflow-hidden">
+        <header class="gradient-bg rounded-3xl p-10 mb-10 text-white shadow-2xl relative overflow-hidden">
             <div class="relative z-10">
-                <div class="flex items-center gap-3 mb-4">
-                    <span class="badge badge-blue bg-white/20 text-white border border-white/30">AI要約・構造化資料</span>
-                    <span class="text-white/80 text-sm">Update: 2026.01.30</span>
+                <div class="flex flex-wrap items-center gap-3 mb-6">
+                    <span class="bg-blue-500/30 backdrop-blur-md text-white px-4 py-1 rounded-full text-xs font-bold border border-white/20 tracking-wider">
+                        <i class="fas fa-robot mr-2"></i>AGENT ANALYZED
+                    </span>
+                    <span class="text-blue-200 text-xs font-medium">DOCUMENT INSIGHT v2.0</span>
                 </div>
-                <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4">{title}</h1>
-                <p class="text-blue-100 text-lg max-w-3xl">{summary_short}</p>
+                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6 tracking-tight">{title}</h1>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10 inline-block">
+                    <p class="text-blue-50 text-lg font-medium">「{summary_short}」</p>
+                </div>
             </div>
-            <i class="fas fa-magic absolute -right-8 -bottom-8 text-9xl text-white/10 rotate-12"></i>
+            <i class="fas fa-shield-halved absolute -right-12 -top-12 text-[15rem] text-white/5 -rotate-12"></i>
         </header>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- Left Column: Main Info -->
-            <div class="lg:col-span-2 space-y-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <!-- Main Content (8 cols) -->
+            <div class="lg:col-span-8 space-y-10">
                 <!-- Overview Section -->
-                <section class="card p-8">
-                    <h2 class="section-title text-2xl">資料の全体像</h2>
-                    <div class="prose max-w-none text-slate-600">
+                <section class="card p-10">
+                    <h2 class="section-title">資料の要旨</h2>
+                    <div class="content-area">
                         {summary_long}
                     </div>
                 </section>
 
-                <!-- Key Points & Eligibility -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <section class="card p-6 border-t-4 border-t-green-500">
-                        <h3 class="font-bold text-xl mb-4 flex items-center gap-2">
-                            <i class="fas fa-lightbulb text-green-500"></i> 重要ポイント
+                <!-- Key Info Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <section class="card p-8 border-t-8 border-t-emerald-500">
+                        <h3 class="font-bold text-xl mb-6 flex items-center gap-3 text-emerald-800">
+                            <i class="fas fa-star"></i> 注目すべき重要点
                         </h3>
-                        <div class="prose text-sm text-slate-600">
+                        <div class="content-area text-sm">
                             {points}
                         </div>
                     </section>
-                    <section class="card p-6 border-t-4 border-t-blue-500">
-                        <h3 class="font-bold text-xl mb-4 flex items-center gap-2">
-                            <i class="fas fa-user-check text-blue-500"></i> 対象・要件
+                    <section class="card p-8 border-t-8 border-t-indigo-500">
+                        <h3 class="font-bold text-xl mb-6 flex items-center gap-3 text-indigo-800">
+                            <i class="fas fa-clipboard-check"></i> 申請対象・主な要件
                         </h3>
-                        <div class="prose text-sm text-slate-600">
+                        <div class="content-area text-sm">
                             {eligibility}
                         </div>
                     </section>
                 </div>
 
-                <!-- Detailed Content -->
-                <section class="card p-8">
-                    <h2 class="section-title text-2xl">詳細解説</h2>
-                    <div class="prose max-w-none text-slate-600">
+                <!-- Detailed Analysis -->
+                <section class="card p-10 bg-gradient-to-br from-white to-blue-50/30">
+                    <h2 class="section-title">詳細分析・重要項目解説</h2>
+                    <div class="content-area">
                         {detailed_sections}
                     </div>
                 </section>
             </div>
 
-            <!-- Right Column: Sidebar -->
-            <div class="space-y-8">
-                <!-- Timeline -->
-                <section class="card p-6 bg-slate-50">
-                    <h3 class="font-bold text-lg mb-4 flex items-center gap-2 text-slate-800">
-                        <i class="fas fa-clock text-orange-500"></i> 期限・スケジュール
+            <!-- Sidebar (4 cols) -->
+            <div class="lg:col-span-4 space-y-8">
+                <!-- Schedule -->
+                <section class="card p-8 bg-slate-900 text-white">
+                    <h3 class="font-bold text-xl mb-6 flex items-center gap-3 text-blue-400">
+                        <i class="fas fa-calendar-days"></i> 重要スケジュール
                     </h3>
-                    <div class="prose text-sm text-slate-600">
+                    <div class="sidebar-area">
                         {timeline}
                     </div>
                 </section>
 
                 <!-- Warnings -->
-                <section class="card p-6 border-l-4 border-l-red-500 bg-red-50">
-                    <h3 class="font-bold text-lg mb-4 flex items-center gap-2 text-red-800">
-                        <i class="fas fa-exclamation-circle"></i> 注意事項・不備対策
+                <section class="card p-8 border-2 border-amber-200 bg-amber-50">
+                    <h3 class="font-bold text-xl mb-6 flex items-center gap-3 text-amber-800">
+                        <i class="fas fa-triangle-exclamation"></i> 見落とし厳禁の注意点
                     </h3>
-                    <div class="prose text-sm text-red-900/80">
+                    <div class="sidebar-area text-amber-900/90">
                         {warnings}
                     </div>
                 </section>
 
-                <!-- Next Actions -->
-                <section class="card p-6 bg-blue-50 border border-blue-100">
-                    <h3 class="font-bold text-lg mb-4 flex items-center gap-2 text-blue-800">
-                        <i class="fas fa-tasks text-blue-600"></i> 推奨アクション
+                <!-- Action Plan -->
+                <section class="card p-8 border-2 border-blue-600">
+                    <h3 class="font-bold text-xl mb-6 flex items-center gap-3 text-blue-800">
+                        <i class="fas fa-route"></i> 今すぐ取り組むべき行動
                     </h3>
-                    <div class="prose text-sm text-blue-800/90">
+                    <div class="sidebar-area text-blue-900">
                         {actions}
                     </div>
                 </section>
 
-                <div class="text-center p-4">
-                    <a href="{original_url}" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                        <i class="fas fa-external-link-alt"></i> 元資料を確認する
+                <!-- External Link -->
+                <div class="p-6 text-center">
+                    <a href="{original_url}" target="_blank" class="group inline-flex items-center gap-3 bg-white border border-slate-200 px-6 py-3 rounded-full shadow-sm hover:shadow-md hover:bg-slate-50 transition-all duration-300">
+                        <span class="text-slate-600 font-bold tracking-wide">ORIGINAL DOCUMENT</span>
+                        <i class="fas fa-arrow-up-right-from-square text-blue-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
                     </a>
                 </div>
             </div>
         </div>
 
-        <footer class="mt-12 py-8 border-t border-slate-200 text-center text-slate-500 text-sm">
-            <p>Generated by Agent-Python Hybrid System &copy; 2026</p>
-            <p class="mt-1">この資料はエージェントによる思考と解析を経て自動生成されました。</p>
+        <!-- Footer -->
+        <footer class="mt-20 py-10 border-t border-slate-200 text-center">
+            <p class="text-slate-400 text-sm font-medium tracking-widest uppercase">Manus Intelligence Service</p>
+            <p class="text-slate-300 text-xs mt-4 max-w-2xl mx-auto leading-relaxed">
+                本資料はAIエージェントによる自動解析によって生成されました。記載内容の正確性については万全を期しておりますが、最終的な判断は必ず公式の元資料をご確認ください。
+            </p>
         </footer>
     </div>
 </body>
@@ -141,46 +161,51 @@ HTML_TEMPLATE = """
 
 def extract_text_from_pdf(pdf_path):
     try:
-        result = subprocess.run(['pdftotext', '-l', '15', pdf_path, '-'], capture_output=True, text=True)
-        return result.stdout[:12000]
+        result = subprocess.run(['pdftotext', '-l', '20', pdf_path, '-'], capture_output=True, text=True)
+        return result.stdout[:15000]
     except Exception as e:
         print(f"Error extracting text from PDF: {e}")
         return ""
 
 def generate_markdown_draft(title, pdf_text):
-    """エージェントにMarkdown形式の原稿を作成させる"""
     prompt = f"""
-    あなたはプロフェッショナルなビジネスアナリストです。以下の資料を読み解き、インフォグラフィック用の「原稿」をMarkdown形式で作成してください。
+    あなたは超一流のビジネスコンサルタント兼テクニカルライターです。
+    以下の資料を徹底的に分析し、経営者が一目で内容を把握できる「インフォグラフィック用原稿」を作成してください。
     
     タイトル: {title}
     資料テキスト（抜粋）:
     {pdf_text}
     
-    以下の項目を構造化して記述してください。各項目は後でHTMLに埋め込むため、指定されたJSONキーに対応する内容をMarkdown（HTMLタグも可）で出力してください。
+    以下の項目を、構造化された純粋なMarkdown形式で作成してください。
     
-    JSON形式で出力してください:
-    - summary_short: 資料を一言で表すキャッチコピー（50文字以内）
-    - summary_long: 全体像の解説（複数の段落に分ける）
-    - points: 重要なポイント（箇条書き）
-    - eligibility: 対象者・要件（箇条書き）
-    - detailed_sections: 主要な章ごとの詳細解説（### 見出し と 本文の組み合わせ）
-    - timeline: スケジュールや締切（時系列がわかるように）
-    - warnings: 注意点（箇条書き）
-    - actions: 次のステップ（チェックリスト形式など）
+    【出力形式】
+    JSON形式で以下のキーを含めてください:
+    - summary_short: 資料の核心を突くキャッチコピー（1文）
+    - summary_long: 全体像の論理的な解説（Markdownの段落）
+    - points: 経営上重要な3〜5つのポイント（Markdownの箇条書き `- `）
+    - eligibility: 申請対象者、金額、主要な要件（Markdownの箇条書き `- `）
+    - detailed_sections: 補助対象経費、審査のポイント、事業計画書の書き方など、実務的な詳細解説（`### 見出し` と本文の組み合わせ）
+    - timeline: 締切日、事業実施期間などの重要日程（Markdown形式）
+    - warnings: 不採択になりやすいポイントや返還リスクなどの警告（Markdownの箇条書き `- `）
+    - actions: 準備すべき書類や相談先などのネクストステップ（Markdownの箇条書き `- `）
+    
+    ※注意: 各値の中身は純粋なMarkdownにしてください。HTMLタグは混ぜないでください。
     """
     
     response = client.chat.completions.create(
         model="gpt-4.1-mini",
-        messages=[{"role": "system", "content": "You are an expert analyst. Provide deep insights and structured drafts in JSON format."},
+        messages=[{"role": "system", "content": "You are a world-class business analyst. Output ONLY valid JSON containing high-quality Markdown content."},
                   {"role": "user", "content": prompt}],
         response_format={"type": "json_object"}
     )
     return json.loads(response.choices[0].message.content)
 
-def markdown_to_html_snippet(text):
-    """簡易的なMarkdown to HTML変換（ここではLLMが既に適切な形式で出していることを期待しつつ、必要なら調整）"""
-    # 今回はLLMにHTMLタグも含めたMarkdownを出力させるため、そのまま使用
-    return text
+def md_to_html(text):
+    """MarkdownをHTMLに変換し、安全な処理を行う"""
+    if not text:
+        return ""
+    # 拡張機能を使用してテーブルやリストを適切に処理
+    return markdown.markdown(text, extensions=['extra', 'nl2br', 'sane_lists'])
 
 def main():
     if not os.path.exists(PROCESSED_FILE):
@@ -190,33 +215,31 @@ def main():
         processed = json.load(f)
 
     for url, data in processed.items():
-        print(f"Agent is thinking about {data['text']}...")
+        print(f"Agent is deeply analyzing {data['text']}...")
         
         pdf_text = extract_text_from_pdf(data['local_path'])
-        
-        # 1. エージェントが原稿を作成
         draft = generate_markdown_draft(data['text'], pdf_text)
         
-        # 原稿を保存（デバッグ・記録用）
+        # 原稿を保存
         pdf_filename = os.path.basename(data['local_path'])
         draft_path = os.path.join(DRAFT_DIR, pdf_filename.replace('.pdf', '.json'))
         with open(draft_path, 'w', encoding='utf-8') as f:
             json.dump(draft, f, ensure_ascii=False, indent=2)
             
-        # 2. PythonがHTMLに整形
+        # HTMLに変換して流し込み
         html_filename = pdf_filename.replace('.pdf', '.html')
         html_path = os.path.join(INFOGRAPHIC_DIR, html_filename)
         
         html_content = HTML_TEMPLATE.format(
             title=data['text'],
             summary_short=draft['summary_short'],
-            summary_long=markdown_to_html_snippet(draft['summary_long']),
-            points=markdown_to_html_snippet(draft['points']),
-            eligibility=markdown_to_html_snippet(draft['eligibility']),
-            detailed_sections=markdown_to_html_snippet(draft['detailed_sections']),
-            timeline=markdown_to_html_snippet(draft['timeline']),
-            warnings=markdown_to_html_snippet(draft['warnings']),
-            actions=markdown_to_html_snippet(draft['actions']),
+            summary_long=md_to_html(draft['summary_long']),
+            points=md_to_html(draft['points']),
+            eligibility=md_to_html(draft['eligibility']),
+            detailed_sections=md_to_html(draft['detailed_sections']),
+            timeline=md_to_html(draft['timeline']),
+            warnings=md_to_html(draft['warnings']),
+            actions=md_to_html(draft['actions']),
             original_url=url
         )
         

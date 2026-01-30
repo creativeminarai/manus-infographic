@@ -1,7 +1,8 @@
 import os
 import json
-import requests
+import subprocess
 import hashlib
+import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 
@@ -11,11 +12,7 @@ DOWNLOAD_DIR = '/home/ubuntu/manus-infographic/data/downloads'
 
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
-HEADERS_BASE = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-    'Accept': 'application/pdf,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
-    'Accept-Language': 'ja,en-US;q=0.9,en;q=0.8',
-}
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 
 def load_processed():
     if os.path.exists(PROCESSED_FILE):
@@ -35,15 +32,15 @@ def is_valid_pdf(path):
     if not os.path.exists(path):
         return False
     try:
-        with open(path, 'rb') as f:
-            header = f.read(4)
-            return header == b'%PDF'
+        # fileコマンドを使用して確認
+        result = subprocess.run(['file', path], capture_output=True, text=True)
+        return 'PDF document' in result.stdout
     except Exception:
         return False
 
 def get_pdf_links(url):
     try:
-        response = requests.get(url, headers=HEADERS_BASE, timeout=15)
+        response = requests.get(url, headers={'User-Agent': USER_AGENT}, timeout=15)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         links = []
@@ -59,27 +56,26 @@ def get_pdf_links(url):
         print(f"Error fetching {url}: {e}")
         return []
 
-def download_pdf(url, filename, referer):
+def download_pdf_with_curl(url, filename, referer):
+    path = os.path.join(DOWNLOAD_DIR, filename)
     try:
-        headers = HEADERS_BASE.copy()
-        headers['Referer'] = referer
-        
-        response = requests.get(url, headers=headers, timeout=30, stream=True)
-        response.raise_for_status()
-        
-        path = os.path.join(DOWNLOAD_DIR, filename)
-        with open(path, 'wb') as f:
-            for chunk in response.iter_content(chunk_size=8192):
-                f.write(chunk)
+        # curlを使用してダウンロード（Refererを付与）
+        cmd = [
+            'curl', '-L', '-A', USER_AGENT,
+            '-H', f'Referer: {referer}',
+            url, '-o', path
+        ]
+        subprocess.run(cmd, check=True, capture_output=True)
         
         if is_valid_pdf(path):
             return path
         else:
             print(f"Downloaded file is not a valid PDF: {url}")
-            os.remove(path)
+            if os.path.exists(path):
+                os.remove(path)
             return None
     except Exception as e:
-        print(f"Error downloading {url}: {e}")
+        print(f"Error downloading with curl {url}: {e}")
         return None
 
 def main():
@@ -106,8 +102,7 @@ def main():
             url_hash = hashlib.md5(pdf_url.encode()).hexdigest()[:10]
             filename = f"doc_{url_hash}.pdf"
             
-            # 元のページURLをRefererとして渡す
-            local_path = download_pdf(pdf_url, filename, url)
+            local_path = download_pdf_with_curl(pdf_url, filename, url)
             if local_path:
                 print(f"Successfully downloaded PDF: {filename}")
                 entry = {

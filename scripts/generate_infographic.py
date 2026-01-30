@@ -1,5 +1,6 @@
 import os
 import json
+import subprocess
 from openai import OpenAI
 
 client = OpenAI()
@@ -84,10 +85,22 @@ HTML_TEMPLATE = """
 </html>
 """
 
-def generate_infographic_content(title):
+def extract_text_from_pdf(pdf_path):
+    try:
+        # pdftotextを使用してテキストを抽出
+        result = subprocess.run(['pdftotext', '-l', '5', pdf_path, '-'], capture_output=True, text=True)
+        return result.stdout[:4000] # 最初の4000文字程度を返す
+    except Exception as e:
+        print(f"Error extracting text from PDF: {e}")
+        return ""
+
+def generate_infographic_content(title, pdf_text):
     prompt = f"""
-    以下の資料タイトルに基づき、ビジネス向けのインフォグラフィックHTML用のコンテンツを生成してください。
+    以下の資料タイトルとPDFから抽出されたテキストに基づき、ビジネス向けのインフォグラフィックHTML用のコンテンツを生成してください。
+    
     タイトル: {title}
+    PDFテキスト抽出（一部）:
+    {pdf_text}
     
     出力はJSON形式で以下のキーを含めてください:
     - summary: 資料の概要（200文字程度）
@@ -114,10 +127,13 @@ def main():
         if not data.get('processed'):
             print(f"Generating infographic for {data['text']}...")
             
-            # コンテンツ生成
-            content = generate_infographic_content(data['text'])
+            # PDFからテキストを抽出
+            pdf_text = extract_text_from_pdf(data['local_path'])
             
-            # HTML作成 (PDFのファイル名に基づいてHTMLファイル名を決定)
+            # コンテンツ生成
+            content = generate_infographic_content(data['text'], pdf_text)
+            
+            # HTML作成
             pdf_filename = os.path.basename(data['local_path'])
             html_filename = pdf_filename.replace('.pdf', '.html')
             html_path = os.path.join(INFOGRAPHIC_DIR, html_filename)

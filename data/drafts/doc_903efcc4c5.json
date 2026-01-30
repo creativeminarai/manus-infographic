@@ -1,0 +1,11 @@
+{
+  "summary_short": "効率的な経営支援を実現するための補助金概要",
+  "summary_long": "本資料は、補助金の申請対象者、補助対象経費、重要な締切日などを整理。事業期間中に必要な手続きを明確化し、事業推進を支援します。短期で成果を目指す経営者向けに構造化された内容です。",
+  "timeline": "- 申請締切日: YYYY年MM月DD日\n- 補助金交付決定通知: YYYY年MM月DD日\n- 請求期限: YYYY年MM月DD日",
+  "period": "- 事業実施期間: YYYY年MM月DD日〜YYYY年MM月DD日\n- 対象期間: YYYY年MM月DD日〜YYYY年MM月DD日",
+  "eligibility": "- 中小企業、個人事業主が対象\n- 補助金上限額: XXX万円\n- 主要要件:\n  - 事業計画の提出\n  - 定められた期間内に事業実施\n  - 経費明細の提出",
+  "expenses": "<div class=\"expense-item\"><strong>人件費</strong><br>補助対象となる社員の労務費用</div><div class=\"expense-item\"><strong>設備投資費</strong><br>生産性向上に必要な機械、装置の購入費</div><div class=\"expense-item\"><strong>外注費</strong><br>専門業者への委託費用</div><div class=\"expense-item\"><strong>消耗品費</strong><br>事業遂行に必要な消耗品購入代</div>",
+  "detailed_sections": "### 申請対象者\n中小企業および個人事業主が補助対象であり、所定の条件を満たす必要があります。\n\n### 補助対象経費\n人件費、設備投資費、外注費、消耗品費が対象となり、明細の提出が必須です。\n\n### 重要日程\n申請締切、決定通知、請求期限など重要な日程を守る必要があります。",
+  "warnings": "- 申請書類は期限内に正確に提出すること\n- 補助対象経費の適用範囲を必ず確認\n- 事業計画の内容変更は事前に相談必須",
+  "actions": "- 申請書の早期準備\n- 必要書類の整備と確認\n- 期日管理の徹底\n- 事業計画のブラッシュアップ"
+}

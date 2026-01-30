@@ -7,66 +7,119 @@
     <title>第19回公募要領第5版</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8fafc; }
-        .card { background: white; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
-        .accent-bar { height: 4px; background: linear-gradient(90deg, #3b82f6, #2563eb); border-radius: 1rem 1rem 0 0; }
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f1f5f9; color: #1e293b; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        .card { background: white; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0; }
+        .section-title { border-left: 4px solid #3b82f6; padding-left: 1rem; margin-bottom: 1.5rem; font-weight: 700; color: #1e3a8a; }
+        .badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600; }
+        .badge-blue { background-color: #dbeafe; color: #1e40af; }
+        .badge-green { background-color: #dcfce7; color: #166534; }
+        .badge-orange { background-color: #ffedd5; color: #9a3412; }
+        .prose li { margin-bottom: 0.5rem; }
     </style>
 </head>
-<body class="p-4 md:p-8">
-    <div class="max-w-4xl mx-auto">
-        <header class="mb-8 text-center">
-            <h1 class="text-3xl font-bold text-slate-800 mb-2">第19回公募要領第5版</h1>
-            <p class="text-slate-500">資料の要約と重要ポイントのまとめ</p>
+<body class="py-8 px-4 md:px-0">
+    <div class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <header class="gradient-bg rounded-2xl p-8 mb-8 text-white shadow-lg relative overflow-hidden">
+            <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="badge badge-blue bg-white/20 text-white border border-white/30">資料要約</span>
+                    <span class="text-white/80 text-sm">Update: 2026.01.30</span>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4">第19回公募要領第5版</h1>
+                <p class="text-blue-100 text-lg max-w-3xl">小規模事業者の販路開拓等を支援する補助金公募要領</p>
+            </div>
+            <i class="fas fa-file-pdf absolute -right-8 -bottom-8 text-9xl text-white/10 rotate-12"></i>
         </header>
 
-        <main class="space-y-6">
-            <section class="card overflow-hidden">
-                <div class="accent-bar"></div>
-                <div class="p-6">
-                    <h2 class="text-xl font-bold text-blue-700 mb-4">概要</h2>
-                    <div class="prose text-slate-700 leading-relaxed">
-                        第19回公募要領第5版は、小規模事業者持続化補助金（一般型 通常枠）に関する最新の公募要領です。2026年1月28日に公開され、補助金は小規模事業者の販路開拓や生産性向上を支援します。補助上限は原則50万円で特例により増額可能。申請は電子申請限定で2026年3月6日から受付開始、4月30日締切です。申請前の要綱熟読とＧビズＩＤプライムの取得が必須です。
-                    </div>
-                </div>
-            </section>
-
-            <div class="grid md:grid-cols-2 gap-6">
-                <section class="card overflow-hidden">
-                    <div class="accent-bar bg-green-500"></div>
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold text-green-700 mb-4">重要ポイント</h2>
-                        <ul class="list-disc list-inside space-y-2 text-slate-700">
-                            ['<li>小規模事業者や特定非営利活動法人を対象に販路開拓・生産性向上の取組に必要な経費の一部を補助</li>', '<li>補助上限は50万円、インボイス特例や賃金引上げ特例により最大200万円まで上乗せ可能</li>', '<li>補助率は原則2/3、赤字事業者の賃金引上げ特例は3/4</li>', '<li>対象経費は機械装置費、広報費、ウェブサイト関連費、展示会出展費、旅費、新商品開発費、借料、委託費など</li>', '<li>申請受付期間：2026年3月6日（金）～4月30日（木）17時（予定）</li>', '<li>申請は電子申請システムのみ受付、郵送不可</li>', '<li>事業支援計画書（様式4）の発行受付は4月16日まで厳守</li>', '<li>ＧビズＩＤプライムのアカウント取得が申請必須</li>', '<li>第三者からの高額な支援アドバイス料金には注意が必要</li>']
-                        </ul>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Column: Main Info -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Overview Section -->
+                <section class="card p-8">
+                    <h2 class="section-title text-2xl">資料の概要</h2>
+                    <div class="prose max-w-none text-slate-600 leading-relaxed">
+                        <p>本資料は2026年1月28日発行の「第19回公募要領第5版」であり、小規模事業者持続化補助金＜一般型 通常枠＞の最新の公募詳細を記しています。地域の小規模事業者が複数年にわたり制度変更や経済環境の変化に対応し、販路開拓や業務効率化を図るための補助金の目的、対象者、申請方法、補助上限や率、スケジュール、注意事項等を包括的に解説しています。電子申請限定で、制度の遵守や書類準備、第三者支援の透明性を重要視し、不正受給防止のための措置も明確に示されています。</p>
                     </div>
                 </section>
 
-                <section class="card overflow-hidden">
-                    <div class="accent-bar bg-orange-500"></div>
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold text-orange-700 mb-4">注意点・締切</h2>
-                        <ul class="list-disc list-inside space-y-2 text-slate-700">
-                            ['<li>補助金は審査あり、不採択や減額の可能性がある</li>', '<li>補助金は後払いのため自己負担が先に必要</li>', '<li>虚偽申告や補助金の不正受給は法的罰則や交付取消の対象</li>', '<li>第三者支援の事実を正確に申告しない場合は不採択や取消となる</li>', '<li>ＧビズＩＤアカウントの第三者利用は利用規約違反</li>', '<li>申請前に「注意事項」や「補助事業者の義務」など要綱の該当ページを熟読必須</li>', '<li>応募締切や事業支援計画書発行締切は厳守、期限過ぎると申請不可</li>', '<li>小規模事業者持続化補助金＜創業型＞との重複申請は禁止</li>']
+                <!-- Key Points Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <section class="card p-6 border-t-4 border-t-green-500">
+                        <h3 class="font-bold text-xl mb-4 flex items-center gap-2">
+                            <i class="fas fa-check-circle text-green-500"></i> 重要ポイント
+                        </h3>
+                        <ul class="space-y-3 text-slate-600">
+                            ['<li>補助金上限50万円＋特例加算(最大200万円)、補助率通常2/3、賃上げ特例は3/4。</li>', '<li>対象は日本国内の小規模事業者や一定要件を満たす特定非営利活動法人。</li>', '<li>電子申請のみ対応、GビズIDプライムの取得が必須。</li>', '<li>申請から交付まで厳格な審査あり、不正受給発覚時には交付取消や刑事罰の可能性。</li>', '<li>申請前に公募要領、参考資料、FAQを熟読し、計画的かつ正確な申請が求められる。</li>']
                         </ul>
+                    </section>
+                    <section class="card p-6 border-t-4 border-t-blue-500">
+                        <h3 class="font-bold text-xl mb-4 flex items-center gap-2">
+                            <i class="fas fa-bullseye text-blue-500"></i> 対象・要件
+                        </h3>
+                        <ul class="space-y-3 text-slate-600">
+                            ['<li>日本国内に所在する小規模事業者（個人事業主または法人）であること。</li>', '<li>業種ごとに定められた従業員上限を満たすこと（例：商業・サービス業5人以下、製造業20人以下等）。</li>', '<li>資本金または出資金が5億円以上の法人に100%株式を保有されていないこと（法人のみ）。</li>', '<li>過去3年の課税所得年平均額が15億円以下であること。</li>', '<li>申請時点で開業済みであること（未開業や創業予定者は対象外）。</li>', '<li>補助金の未提出報告書等が無いこと（過去の補助事業の未報告がある事業者は対象外）。</li>', '<li>小規模事業者持続化補助金＜創業型＞との重複申請は不可。</li>']
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- Detailed Content -->
+                <section class="card p-8">
+                    <h2 class="section-title text-2xl">詳細内容・解説</h2>
+                    <div class="space-y-6">
+                        <h3>事業概要</h3><p>複数年にわたり制度変更等に対応するため、小規模事業者等の販路開拓や業務効率化の取組に要する経費の一部を補助し、地域の雇用・産業を支える持続的発展を目指す。</p><h3>補助対象者</h3><p>日本国内の小規模事業者や一定要件を満たす特定非営利活動法人が対象。業種ごとに従業員数など具体的な基準が設けられている。資本金や課税所得の要件も重要。</p><h3>申請手続きとスケジュール</h3><p>電子申請限定で申請受付期間は2026年3月6日から4月30日17時まで。申請にはGビズIDプライムの取得が必須。事業支援計画書の発行依頼締切は4月16日。採択結果は7月ごろ発表予定。</p><h3>補助内容と補助率</h3><p>補助上限は通常50万円で、インボイス特例や賃上げ特例により加算あり。補助率は通常2/3、赤字事業者の賃上げ特例は3/4。</p><h3>注意事項・不正防止</h3><p>申請内容の虚偽や不正受給、過剰請求等は禁止。支援者の支援料金やGビズIDの不適切共有に厳しい規制が課されている。不正が発覚した場合は補助金取消や罰則が科される可能性。</p>
                     </div>
                 </section>
             </div>
 
-            <section class="card overflow-hidden">
-                <div class="accent-bar bg-purple-500"></div>
-                <div class="p-6">
-                    <h2 class="text-xl font-bold text-purple-700 mb-4">次のアクション</h2>
-                    <div class="prose text-slate-700">
-                        <ul><li>まず、最新の公募要領全体を必ず熟読してください（P.1 注意事項、P.23 補助事業者の義務など重点的に）。</li><li>ＧビズＩＤプライムのアカウントを事前取得し、利用登録を完了させてください（https://gbiz-id.go.jp/top/）。</li><li>事業支援計画書（様式4）の発行依頼は2026年4月16日までに済ませましょう。発行不能になるため期限厳守。</li><li>自身の所属地区（商工会地区か商工会議所地区か）を確認し、問い合わせ先を把握してください。</li><li>申請は電子申請システムを通してのみ可能です。郵送等の方法は利用不可。</li><li>第三者支援やアドバイスを受ける場合は契約内容や料金に注意し、正確に申告してください。</li><li>申請後は補助事業者の義務を遵守し、虚偽申請や不正受給厳禁であることを理解の上取り組んでください。</li></ul>
+            <!-- Right Column: Sidebar -->
+            <div class="space-y-8">
+                <!-- Status/Timeline -->
+                <section class="card p-6 bg-slate-50">
+                    <h3 class="font-bold text-lg mb-4 flex items-center gap-2 text-slate-800">
+                        <i class="fas fa-calendar-alt text-orange-500"></i> 期限・スケジュール
+                    </h3>
+                    <div class="space-y-4">
+                        <div><strong>2026年1月28日</strong> - 公募要領公開</div><div><strong>2026年3月6日</strong> - 申請受付開始</div><div><strong>2026年4月16日</strong> - 事業支援計画書発行依頼締切</div><div><strong>2026年4月30日 17:00</strong> - 申請受付締切（予定）</div><div><strong>2026年7月頃</strong> - 採択結果通知予定</div><div><strong>2027年5月30日</strong> - 見積書等提出締切（採択後）</div>
                     </div>
-                </div>
-            </section>
-        </main>
+                </section>
 
-        <footer class="mt-12 text-center text-slate-400 text-sm">
-            <p>元資料: <a href="https://www.jizokukanb.com/jizokuka_r6h/doc/kobo/r6_19/19_%E4%B8%80%E8%88%AC%E5%9E%8B_%E5%85%AC%E5%8B%9F%E8%A6%81%E9%A0%98_%E7%AC%AC5%E7%89%88.pdf?28" class="text-blue-500 hover:underline" target="_blank">こちらをクリック</a></p>
-            <p class="mt-2">&copy; 2026 Manus Infographic Generator</p>
+                <!-- Warnings -->
+                <section class="card p-6 border-l-4 border-l-orange-500 bg-orange-50">
+                    <h3 class="font-bold text-lg mb-4 flex items-center gap-2 text-orange-800">
+                        <i class="fas fa-exclamation-triangle"></i> 注意事項
+                    </h3>
+                    <ul class="space-y-3 text-orange-900/80 text-sm">
+                        ['<li>申請書類の記載漏れや不備があると不採択または交付決定取消となる。</li>', '<li>虚偽申告や不正受給が発覚すると補助金返還や加算金徴収、刑事罰の可能性がある。</li>', '<li>第三者支援を受ける場合は支援内容・料金の記載が必須。虚偽報告は禁止。</li>', '<li>GビズIDアカウントの不適切共有は禁止されている。</li>', '<li>事業支援計画書の発行依頼は期限厳守で、期限後の発行は不可。</li>', '<li>電子申請のみ受け付け、郵送申請は禁止。</li>']
+                    </ul>
+                </section>
+
+                <!-- Next Actions -->
+                <section class="card p-6 bg-blue-50 border border-blue-100">
+                    <h3 class="font-bold text-lg mb-4 flex items-center gap-2 text-blue-800">
+                        <i class="fas fa-rocket text-blue-600"></i> 次のアクション
+                    </h3>
+                    <div class="space-y-3">
+                        <ul><li><input type='checkbox'/> GビズIDプライムのアカウントを事前に取得する（https://gbiz-id.go.jp/top/）。</li><li><input type='checkbox'/> 事業計画（様式2）および申請書類を準備し、地域商工会・商工会議所に事業支援計画書（様式4）発行を依頼する。</li><li><input type='checkbox'/> 2026年4月16日までに事業支援計画書発行依頼を完了させる。</li><li><input type='checkbox'/> 電子申請システムで2026年4月30日17時までに申請書類を提出する。</li><li><input type='checkbox'/> 採択後、必要な見積書等を期限内に提出し、交付決定を待つ。</li><li><input type='checkbox'/> 補助事業の進行と実績報告を確実に行い、不正を行わない。</li></ul>
+                    </div>
+                </section>
+
+                <!-- Metadata -->
+                <div class="text-center p-4">
+                    <a href="https://www.jizokukanb.com/jizokuka_r6h/doc/kobo/r6_19/19_%E4%B8%80%E8%88%AC%E5%9E%8B_%E5%85%AC%E5%8B%9F%E8%A6%81%E9%A0%98_%E7%AC%AC5%E7%89%88.pdf?28" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                        <i class="fas fa-external-link-alt"></i> 元資料を確認する
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 py-8 border-t border-slate-200 text-center text-slate-500 text-sm">
+            <p>Generated by Manus Infographic System &copy; 2026</p>
+            <p class="mt-1">この要約はAIによって生成されており、正確な情報は必ず元資料をご確認ください。</p>
         </footer>
     </div>
 </body>

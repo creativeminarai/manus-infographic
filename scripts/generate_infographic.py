@@ -87,9 +87,8 @@ HTML_TEMPLATE = """
 
 def extract_text_from_pdf(pdf_path):
     try:
-        # pdftotextを使用してテキストを抽出
         result = subprocess.run(['pdftotext', '-l', '5', pdf_path, '-'], capture_output=True, text=True)
-        return result.stdout[:4000] # 最初の4000文字程度を返す
+        return result.stdout[:4000]
     except Exception as e:
         print(f"Error extracting text from PDF: {e}")
         return ""
@@ -111,7 +110,8 @@ def generate_infographic_content(title, pdf_text):
     
     response = client.chat.completions.create(
         model="gpt-4.1-mini",
-        messages=[{"role": "user", "content": prompt}],
+        messages=[{"role": "system", "content": "You are a helpful assistant that outputs JSON."},
+                  {"role": "user", "content": prompt}],
         response_format={"type": "json_object"}
     )
     return json.loads(response.choices[0].message.content)
@@ -127,13 +127,9 @@ def main():
         if not data.get('processed'):
             print(f"Generating infographic for {data['text']}...")
             
-            # PDFからテキストを抽出
             pdf_text = extract_text_from_pdf(data['local_path'])
-            
-            # コンテンツ生成
             content = generate_infographic_content(data['text'], pdf_text)
             
-            # HTML作成
             pdf_filename = os.path.basename(data['local_path'])
             html_filename = pdf_filename.replace('.pdf', '.html')
             html_path = os.path.join(INFOGRAPHIC_DIR, html_filename)

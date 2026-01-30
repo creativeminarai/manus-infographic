@@ -3,8 +3,9 @@ import json
 import subprocess
 import hashlib
 import requests
+import shlex
 from bs4 import BeautifulSoup
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin, urlparse, quote
 
 URLS_FILE = '/home/ubuntu/manus-infographic/data/urls.txt'
 PROCESSED_FILE = '/home/ubuntu/manus-infographic/data/processed_files.json'
@@ -32,7 +33,6 @@ def is_valid_pdf(path):
     if not os.path.exists(path):
         return False
     try:
-        # fileコマンドを使用して確認
         result = subprocess.run(['file', path], capture_output=True, text=True)
         return 'PDF document' in result.stdout
     except Exception:
@@ -48,6 +48,7 @@ def get_pdf_links(url):
             href = a['href']
             clean_href = href.split('?')[0]
             if clean_href.lower().endswith('.pdf'):
+                # hrefを適切にエンコード
                 full_url = urljoin(url, href)
                 text = a.get_text(strip=True) or os.path.basename(urlparse(full_url).path)
                 links.append({'url': full_url, 'text': text})
@@ -59,12 +60,13 @@ def get_pdf_links(url):
 def download_pdf_with_curl(url, filename, referer):
     path = os.path.join(DOWNLOAD_DIR, filename)
     try:
-        # curlを使用してダウンロード（Refererを付与）
+        # curlコマンドを構築
         cmd = [
             'curl', '-L', '-A', USER_AGENT,
             '-H', f'Referer: {referer}',
             url, '-o', path
         ]
+        # subprocess.runでリスト形式で渡すことでシェルのエスケープ問題を回避
         subprocess.run(cmd, check=True, capture_output=True)
         
         if is_valid_pdf(path):

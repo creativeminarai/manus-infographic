@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>æºåä¸­Download icon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f1f5f9; color: #0f172a; }
+        .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        .card { background: white; border-radius: 1.5rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0; }
+        .accent-title { position: relative; display: inline-block; padding-bottom: 0.5rem; }
+        .accent-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40%; height: 4px; background: #3b82f6; border-radius: 2px; }
+        
+        /* Markdown Custom Styling */
+        .content-area h3 { font-size: 1.125rem; font-weight: 700; color: #1e40af; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .content-area p { margin-bottom: 1rem; line-height: 1.7; color: #334155; }
+        .content-area ul { list-style: none; padding-left: 0; margin-bottom: 1.25rem; }
+        .content-area li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; }
+        .content-area li::before { content: '•'; position: absolute; left: 0; color: #3b82f6; font-weight: bold; }
+        
+        /* Specific Layout Components */
+        .date-box { background: #eff6ff; border-left: 6px solid #2563eb; padding: 1.5rem; border-radius: 0.75rem; }
+        .expense-item { background: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; border-radius: 0.75rem; transition: all 0.2s; }
+        .expense-item:hover { border-color: #3b82f6; background: #f0f9ff; }
+        
+        .highlight-card { background: linear-gradient(to right, #ffffff, #f0f9ff); border-left: 8px solid #3b82f6; }
+    </style>
+</head>
+<body class="py-12 px-4 md:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="hero-gradient rounded-[2rem] p-8 md:p-12 mb-10 text-white shadow-2xl relative overflow-hidden">
+            <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="bg-white/20 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold tracking-widest border border-white/30 uppercase">Analysis Report</span>
+                    <span class="text-blue-100 text-xs">Update: 2026.01.30</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-black mb-6 leading-tight tracking-tight">æºåä¸­Download icon</h1>
+                <div class="flex flex-wrap gap-4">
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-2xl">
+                        <p class="text-blue-50 text-lg font-bold">「事業遂行に不可欠な補助金のポイントを簡潔整理！」</p>
+                    </div>
+                </div>
+            </div>
+            <i class="fas fa-file-invoice-dollar absolute -right-16 -bottom-16 text-[20rem] text-white/5 rotate-12"></i>
+        </header>
+
+        <!-- Top Highlights: Summary & Dates -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+            <!-- Short Summary Card -->
+            <section class="card p-8 lg:col-span-2 highlight-card">
+                <h2 class="text-2xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                    <i class="fas fa-quote-left text-blue-500"></i> 資料の要点（30秒で把握）
+                </h2>
+                <div class="content-area text-lg text-slate-700 leading-relaxed">
+                    <p>本資料は補助金申請に必要な厳守事項と申請要件、補助対象経費の詳細を分かりやすく構造化。申請対象者の条件や重要な日程、実施期間も明示し、申請者が効率よく準備できるよう解説しています。</p>
+                </div>
+            </section>
+
+            <!-- Important Dates Card -->
+            <section class="card p-8 bg-slate-900 text-white border-none shadow-blue-900/20">
+                <h2 class="text-xl font-bold mb-6 flex items-center gap-3 text-blue-400">
+                    <i class="fas fa-calendar-check"></i> 重要日程
+                </h2>
+                <div class="space-y-4">
+                    <ul>
+<li>申請締切日: 2024年7月31日</li>
+<li>審査結果通知: 2024年9月15日</li>
+<li>補助事業完了報告期限: 2025年3月31日</li>
+</ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Period & Eligibility Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <!-- Period Box -->
+            <div class="date-box">
+                <h3 class="text-blue-800 font-black text-xl mb-4 flex items-center gap-2">
+                    <i class="fas fa-hourglass-half"></i> 実施・対象期間
+                </h3>
+                <div class="content-area text-blue-900 font-medium">
+                    <ul>
+<li>事業実施期間: 2024年8月1日～2025年3月31日</li>
+<li>対象経費発生期間: 2024年8月1日～2025年3月31日</li>
+</ul>
+                </div>
+            </div>
+            <!-- Eligibility Box -->
+            <div class="bg-emerald-50 border-l-6 border-emerald-500 p-6 rounded-xl">
+                <h3 class="text-emerald-800 font-black text-xl mb-4 flex items-center gap-2">
+                    <i class="fas fa-user-tag"></i> 申請対象・要件
+                </h3>
+                <div class="content-area text-emerald-900 text-sm">
+                    <ul>
+<li>中小企業および個人事業主が申請可能</li>
+<li>補助上限額: 500万円</li>
+<li>主要要件:</li>
+<li>事業計画の明確性</li>
+<li>事業期間内の経費使用</li>
+<li>過去不正受給歴なし</li>
+</ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Content Area -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <!-- Expenses Analysis (Main) -->
+            <div class="lg:col-span-8 space-y-10">
+                <section class="card p-8 md:p-10">
+                    <h2 class="accent-title text-2xl font-black mb-8 text-slate-800">補助対象経費の詳細</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="expense-item"><strong>人件費</strong><br>補助対象期間中の従業員給与および関連諸手当</div><div class="expense-item"><strong>設備費</strong><br>生産設備の購入費用および設置費用</div><div class="expense-item"><strong>委託費</strong><br>専門家へのコンサルティング費用および外注費</div><div class="expense-item"><strong>材料費</strong><br>事業に必要な原材料および消耗品費用</div>
+                    </div>
+                </section>
+
+                <section class="card p-8 md:p-10">
+                    <h2 class="accent-title text-2xl font-black mb-8 text-slate-800">重要項目の詳細解説</h2>
+                    <div class="content-area">
+                        <h3>補助対象者の条件</h3>
+<p>中小企業基本法に基づく企業規模を満たし、合意した事業計画を持つ法人及び個人事業主。</p>
+<h3>補助対象経費の範囲</h3>
+<p>人件費、設備費、委託費、材料費を対象とし、事業目的に合致する使途であることが必要。</p>
+<h3>申請手続きの流れ</h3>
+<p>申請書類作成→提出→審査→結果通知→事業開始→報告書提出。</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar Info -->
+            <div class="lg:col-span-4 space-y-8">
+                <!-- Warnings -->
+                <section class="card p-8 border-2 border-red-100 bg-red-50/50">
+                    <h3 class="font-bold text-xl mb-6 flex items-center gap-3 text-red-700">
+                        <i class="fas fa-exclamation-triangle"></i> 注意事項・不備対策
+                    </h3>
+                    <div class="content-area text-sm text-red-900/80">
+                        <ul>
+<li>申請締切後の書類追加提出は認められません</li>
+<li>不正受給が判明した場合は返還および法的措置があります</li>
+<li>対象経費は事業期間内に発生したもののみ有効</li>
+<li>申請条件の不備は審査対象外となります</li>
+</ul>
+                    </div>
+                </section>
+
+                <!-- Action Plan -->
+                <section class="card p-8 border-2 border-blue-600 bg-blue-50/30">
+                    <h3 class="font-bold text-xl mb-6 flex items-center gap-3 text-blue-800">
+                        <i class="fas fa-rocket"></i> 次のアクション
+                    </h3>
+                    <div class="content-area text-sm text-blue-900 font-bold">
+                        <ul>
+<li>補助金申請書の早期作成を推奨</li>
+<li>申請条件の再確認と要件満たしの確認</li>
+<li>必要書類の漏れ検査</li>
+<li>申請締切前の提出準備完了を目指す</li>
+</ul>
+                    </div>
+                </section>
+
+                <!-- Metadata -->
+                <div class="text-center">
+                    <a href="https://it-shien.smrj.go.jp/pdf/it2026_addition_list.pdf" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-slate-800 text-white rounded-full font-bold hover:bg-slate-700 transition-all shadow-lg">
+                        <i class="fas fa-external-link-alt"></i> 元資料を確認
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-20 py-10 border-t border-slate-200 text-center">
+            <p class="text-slate-400 text-xs font-bold tracking-widest uppercase mb-4">Generated by Advanced Agent-Python Flow</p>
+            <p class="text-slate-400 text-xs max-w-xl mx-auto">
+                本資料はAIエージェントによる自動解析によって生成されました。記載内容の正確性については万全を期しておりますが、最終的な判断は必ず公式の元資料をご確認ください。
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>採択～交付決定の手引き</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f1f5f9; color: #0f172a; }
+        .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        .card { background: white; border-radius: 1.5rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0; }
+        .accent-title { position: relative; display: inline-block; padding-bottom: 0.5rem; }
+        .accent-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40%; height: 4px; background: #3b82f6; border-radius: 2px; }
+        
+        /* Markdown Custom Styling */
+        .content-area h3 { font-size: 1.125rem; font-weight: 700; color: #1e40af; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .content-area p { margin-bottom: 1rem; line-height: 1.7; color: #334155; }
+        .content-area ul { list-style: none; padding-left: 0; margin-bottom: 1.25rem; }
+        .content-area li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; }
+        .content-area li::before { content: '•'; position: absolute; left: 0; color: #3b82f6; font-weight: bold; }
+        
+        /* Specific Layout Components */
+        .date-box { background: #eff6ff; border-left: 6px solid #2563eb; padding: 1.5rem; border-radius: 0.75rem; }
+        .expense-item { background: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; border-radius: 0.75rem; transition: all 0.2s; }
+        .expense-item:hover { border-color: #3b82f6; background: #f0f9ff; }
+        
+        .highlight-card { background: linear-gradient(to right, #ffffff, #f0f9ff); border-left: 8px solid #3b82f6; }
+    </style>
+</head>
+<body class="py-12 px-4 md:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="hero-gradient rounded-[2rem] p-8 md:p-12 mb-10 text-white shadow-2xl relative overflow-hidden">
+            <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="bg-white/20 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold tracking-widest border border-white/30 uppercase">Analysis Report</span>
+                    <span class="text-blue-100 text-xs">Update: 2026.01.30</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-black mb-6 leading-tight tracking-tight">採択～交付決定の手引き</h1>
+                <div class="flex flex-wrap gap-4">
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-2xl">
+                        <p class="text-blue-50 text-lg font-bold">「小規模事業者持続化補助金＜一般型 通常枠＞採択後の見積書提出と申請修正手順ガイド」</p>
+                    </div>
+                </div>
+            </div>
+            <i class="fas fa-file-invoice-dollar absolute -right-16 -bottom-16 text-[20rem] text-white/5 rotate-12"></i>
+        </header>
+
+        <!-- Top Highlights: Summary & Dates -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+            <!-- Short Summary Card -->
+            <section class="card p-8 lg:col-span-2 highlight-card">
+                <h2 class="text-2xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                    <i class="fas fa-quote-left text-blue-500"></i> 資料の要点（30秒で把握）
+                </h2>
+                <div class="content-area text-lg text-slate-700 leading-relaxed">
+                    <p>本資料は小規模事業者持続化補助金＜一般型 通常枠＞の採択後、商工会地区における見積書添付および申請内容修正の手順を解説。電子申請環境や差戻し対応、補助金交付までの流れをわかりやすく示し、手続き円滑化を支援します。</p>
+                </div>
+            </section>
+
+            <!-- Important Dates Card -->
+            <section class="card p-8 bg-slate-900 text-white border-none shadow-blue-900/20">
+                <h2 class="text-xl font-bold mb-6 flex items-center gap-3 text-blue-400">
+                    <i class="fas fa-calendar-check"></i> 重要日程
+                </h2>
+                <div class="space-y-4">
+                    <ul>
+<li>2024/6/7 初版作成</li>
+<li>2025/3/25 UI変更に伴う画面更新</li>
+<li>2025/9/5 第17回機能実装アップデート</li>
+</ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Period & Eligibility Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <!-- Period Box -->
+            <div class="date-box">
+                <h3 class="text-blue-800 font-black text-xl mb-4 flex items-center gap-2">
+                    <i class="fas fa-hourglass-half"></i> 実施・対象期間
+                </h3>
+                <div class="content-area text-blue-900 font-medium">
+                    <ul>
+<li>申請システム操作および交付決定手続きの実施期間は資料発行日基準で随時</li>
+<li>詳細な事業実施期間は個別交付決定通知を参照</li>
+</ul>
+                </div>
+            </div>
+            <!-- Eligibility Box -->
+            <div class="bg-emerald-50 border-l-6 border-emerald-500 p-6 rounded-xl">
+                <h3 class="text-emerald-800 font-black text-xl mb-4 flex items-center gap-2">
+                    <i class="fas fa-user-tag"></i> 申請対象・要件
+                </h3>
+                <div class="content-area text-emerald-900 text-sm">
+                    <ul>
+<li>小規模事業者対象</li>
+<li>補助対象: 一般型 通常枠の公募申請者</li>
+<li>電子申請利用者（紙申請は紙申請で手続き完結）</li>
+<li>ブラウザ対応: Windows(Google Chrome, Firefox, Edge), iOS(Google Chrome, Safari), Android(Google Chrome), macOS(Google Chrome, Firefox, Safari)</li>
+<li>ファイル添付許容拡張子：pdf、zip、doc、docx、xls、xlsx、png、bmp、jpg、jpeg、heic、gif</li>
+</ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Content Area -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <!-- Expenses Analysis (Main) -->
+            <div class="lg:col-span-8 space-y-10">
+                <section class="card p-8 md:p-10">
+                    <h2 class="accent-title text-2xl font-black mb-8 text-slate-800">補助対象経費の詳細</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="expense-item"><strong>経費明細表に基づく経費</strong><br>初回申請時の経費明細表内容を基に、見積書を必ず添付する必要があります。</div><div class="expense-item"><strong>資金調達方法</strong><br>経費に対して合理的な資金調達金額を入力。事務所賃料や住宅宿泊事業者の関連事項も入力が必須です。</div>
+                    </div>
+                </section>
+
+                <section class="card p-8 md:p-10">
+                    <h2 class="accent-title text-2xl font-black mb-8 text-slate-800">重要項目の詳細解説</h2>
+                    <div class="content-area">
+                        <h3>はじめに</h3>
+<ul>
+<li>交付規程遵守及び支援依頼先の区分（商工会・商工会議所）を確認</li>
+<li>電子申請の場合マイページで通知確認可能</li>
+<li>動作環境は最新ブラウザを使用すること</li>
+</ul>
+<h3>差戻し内容の確認（1/2）</h3>
+<ul>
+<li>商工会からの差戻しは通知、修正必須</li>
+<li>採択通知書閲覧や申請開始はマイページから実施</li>
+</ul>
+<h3>差戻し内容の確認（2/2）</h3>
+<ul>
+<li>修正依頼項目を画面で確認し修正不要か判断</li>
+</ul>
+<h3>修正依頼への対応</h3>
+<ul>
+<li>指示コメントに従い申請内容を編集</li>
+<li>修正完了後、見積書添付画面へ遷移</li>
+</ul>
+<h3>見積書の添付（1/3）</h3>
+<ul>
+<li>初回申請の経費明細表を確認し画面下へスクロール</li>
+</ul>
+<h3>見積書の添付（2/3）</h3>
+<ul>
+<li>全経費分の見積書を添付</li>
+<li>購入予定先も入力</li>
+</ul>
+<h3>見積書の添付（3/3）</h3>
+<ul>
+<li>資金調達方法の金額入力と必要事項の記入</li>
+<li>次へを押し確認ダイアログを承認</li>
+</ul>
+<h3>申請の提出</h3>
+<ul>
+<li>見積書添付・修正完了確認後、商工会へ通知</li>
+<li>商工会が再提出手続きを実施</li>
+</ul>
+<h3>商工会からの差戻し対応</h3>
+<ul>
+<li>商工会のコメントを確認し再修正実施</li>
+<li>「公募・交付申請を開始する」から再申請手続き</li>
+</ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar Info -->
+            <div class="lg:col-span-4 space-y-8">
+                <!-- Warnings -->
+                <section class="card p-8 border-2 border-red-100 bg-red-50/50">
+                    <h3 class="font-bold text-xl mb-6 flex items-center gap-3 text-red-700">
+                        <i class="fas fa-exclamation-triangle"></i> 注意事項・不備対策
+                    </h3>
+                    <div class="content-area text-sm text-red-900/80">
+                        <ul>
+<li>補助金は＜一般型 通常枠＞に限り利用可。他制度申請には不可</li>
+<li>紙申請の場合は交付決定後も紙で手続き継続</li>
+<li>ブラウザは最新バージョン必須。Internet Explorerモードは不可</li>
+<li>画像等の画面表示は将来変更される可能性あり</li>
+<li>修正依頼が発生した場合は全て対応しないと交付決定不可</li>
+<li>見積書添付は必須。修正依頼がなくても必ず添付を行うこと</li>
+</ul>
+                    </div>
+                </section>
+
+                <!-- Action Plan -->
+                <section class="card p-8 border-2 border-blue-600 bg-blue-50/30">
+                    <h3 class="font-bold text-xl mb-6 flex items-center gap-3 text-blue-800">
+                        <i class="fas fa-rocket"></i> 次のアクション
+                    </h3>
+                    <div class="content-area text-sm text-blue-900 font-bold">
+                        <ul>
+<li>マイページにログインし採択通知を確認</li>
+<li>「公募・交付申請を開始する」を押下し申請内容を確認</li>
+<li>修正依頼があれば画面内指示に沿って申請内容を修正</li>
+<li>全経費の見積書を準備し添付。購入予定先を入力</li>
+<li>資金調達方法の金額・関連事項を入力して申請内容を送信</li>
+<li>商工会からのコメントや差戻し通知を確認し必要に応じて再修正</li>
+<li>すべて完了後、交付決定の承認を待つ</li>
+</ul>
+                    </div>
+                </section>
+
+                <!-- Metadata -->
+                <div class="text-center">
+                    <a href="https://www.jizokukanb.com/jizokuka_r6h/app_sys/manual/tebiki/17/採択～交付決定_商工会地区.pdf" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-slate-800 text-white rounded-full font-bold hover:bg-slate-700 transition-all shadow-lg">
+                        <i class="fas fa-external-link-alt"></i> 元資料を確認
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-20 py-10 border-t border-slate-200 text-center">
+            <p class="text-slate-400 text-xs font-bold tracking-widest uppercase mb-4">Generated by Advanced Agent-Python Flow</p>
+            <p class="text-slate-400 text-xs max-w-xl mx-auto">
+                本資料はAIエージェントによる自動解析によって生成されました。記載内容の正確性については万全を期しておりますが、最終的な判断は必ず公式の元資料をご確認ください。
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

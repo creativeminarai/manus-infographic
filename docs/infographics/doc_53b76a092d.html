@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>採択者一覧（第17回受付締切分）</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f1f5f9; color: #0f172a; }
+        .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        .card { background: white; border-radius: 1.5rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0; }
+        .accent-title { position: relative; display: inline-block; padding-bottom: 0.5rem; }
+        .accent-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40%; height: 4px; background: #3b82f6; border-radius: 2px; }
+        
+        /* Markdown Custom Styling */
+        .content-area h3 { font-size: 1.125rem; font-weight: 700; color: #1e40af; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .content-area p { margin-bottom: 1rem; line-height: 1.7; color: #334155; }
+        .content-area ul { list-style: none; padding-left: 0; margin-bottom: 1.25rem; }
+        .content-area li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; }
+        .content-area li::before { content: '•'; position: absolute; left: 0; color: #3b82f6; font-weight: bold; }
+        
+        /* Specific Layout Components */
+        .date-box { background: #eff6ff; border-left: 6px solid #2563eb; padding: 1.5rem; border-radius: 0.75rem; }
+        .expense-item { background: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; border-radius: 0.75rem; transition: all 0.2s; }
+        .expense-item:hover { border-color: #3b82f6; background: #f0f9ff; }
+        
+        .highlight-card { background: linear-gradient(to right, #ffffff, #f0f9ff); border-left: 8px solid #3b82f6; }
+    </style>
+</head>
+<body class="py-12 px-4 md:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="hero-gradient rounded-[2rem] p-8 md:p-12 mb-10 text-white shadow-2xl relative overflow-hidden">
+            <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="bg-white/20 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold tracking-widest border border-white/30 uppercase">Analysis Report</span>
+                    <span class="text-blue-100 text-xs">Update: 2026.01.30</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-black mb-6 leading-tight tracking-tight">採択者一覧（第17回受付締切分）</h1>
+                <div class="flex flex-wrap gap-4">
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-2xl">
+                        <p class="text-blue-50 text-lg font-bold">「第17回小規模事業者持続化補助金 採択者一覧発表」</p>
+                    </div>
+                </div>
+            </div>
+            <i class="fas fa-file-invoice-dollar absolute -right-16 -bottom-16 text-[20rem] text-white/5 rotate-12"></i>
+        </header>
+
+        <!-- Top Highlights: Summary & Dates -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+            <!-- Short Summary Card -->
+            <section class="card p-8 lg:col-span-2 highlight-card">
+                <h2 class="text-2xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                    <i class="fas fa-quote-left text-blue-500"></i> 資料の要点（30秒で把握）
+                </h2>
+                <div class="content-area text-lg text-slate-700 leading-relaxed">
+                    <p>小規模事業者持続化補助金（一般型 通常枠）第17回締切分の採択者を掲載。全国の中小事業者が販路拡大や設備導入、新商品開発等で事業強化を図る。交付決定通知は見積書提出後の不備解消後に発行し、内容確認後に事業開始する必要がある。事業詳細、注意点も整理。</p>
+                </div>
+            </section>
+
+            <!-- Important Dates Card -->
+            <section class="card p-8 bg-slate-900 text-white border-none shadow-blue-900/20">
+                <h2 class="text-xl font-bold mb-6 flex items-center gap-3 text-blue-400">
+                    <i class="fas fa-calendar-check"></i> 重要日程
+                </h2>
+                <div class="space-y-4">
+                    <ul>
+<li>締切日：第17回受付締切分</li>
+<li>採択者一覧発表日：資料記載日基準</li>
+<li>交付決定通知書発行時期：見積書提出・不備解消後</li>
+</ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Period & Eligibility Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <!-- Period Box -->
+            <div class="date-box">
+                <h3 class="text-blue-800 font-black text-xl mb-4 flex items-center gap-2">
+                    <i class="fas fa-hourglass-half"></i> 実施・対象期間
+                </h3>
+                <div class="content-area text-blue-900 font-medium">
+                    <ul>
+<li>事業実施期間は交付決定通知書発行後開始</li>
+<li>具体的な期間は個別通知にて要確認</li>
+</ul>
+                </div>
+            </div>
+            <!-- Eligibility Box -->
+            <div class="bg-emerald-50 border-l-6 border-emerald-500 p-6 rounded-xl">
+                <h3 class="text-emerald-800 font-black text-xl mb-4 flex items-center gap-2">
+                    <i class="fas fa-user-tag"></i> 申請対象・要件
+                </h3>
+                <div class="content-area text-emerald-900 text-sm">
+                    <ul>
+<li>小規模事業者および一般型申請者対象</li>
+<li>法人・個人事業主とも申請可能</li>
+<li>補助対象事業は販路開拓、設備導入、商品開発等</li>
+<li>申請区分：通常枠（商工会地区含む）</li>
+</ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Content Area -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <!-- Expenses Analysis (Main) -->
+            <div class="lg:col-span-8 space-y-10">
+                <section class="card p-8 md:p-10">
+                    <h2 class="accent-title text-2xl font-black mb-8 text-slate-800">補助対象経費の詳細</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="expense-item"><strong>設備導入費</strong><br>販路拡大・生産性向上に資する機械・機器導入費用</div><div class="expense-item"><strong>広告宣伝費</strong><br>パンフレットやWebサイト制作、看板設置等の販促関連費用</div><div class="expense-item"><strong>ソフトウェア制作費</strong><br>WebコンテンツやITシステム開発費用</div><div class="expense-item"><strong>改装工事費</strong><br>バリアフリー化、店舗内装の改修工事費用</div><div class="expense-item"><strong>商品開発費</strong><br>新規商品・サービス開発に係る試作・材料費等</div><div class="expense-item"><strong>運搬設置費</strong><br>設備搬入及び設置に要する費用</div>
+                    </div>
+                </section>
+
+                <section class="card p-8 md:p-10">
+                    <h2 class="accent-title text-2xl font-black mb-8 text-slate-800">重要項目の詳細解説</h2>
+                    <div class="content-area">
+                        <h3>採択者概要</h3>
+<p>全国の小規模事業者が販路拡大や新商品開発を目的に採択される。</p>
+<h3>交付決定通知書について</h3>
+<p>採択通知書発行後、見積書の提出など不備が解消されてから交付決定通知書を発行。通知内容確認後に事業開始必須。</p>
+<h3>申請対象と要件</h3>
+<p>法人番号の登録されている法人および個人事業者が申請可能。一般型通常枠として商工会地区を中心に幅広い業種が対象。</p>
+<h3>補助対象経費詳細</h3>
+<p>機械設備、広告宣伝、店舗改装、商品開発費など販路開拓に直結する項目が対象となる。</p>
+<h3>注意事項</h3>
+<p>交付決定通知書発行前の事業開始は不可。不備解消が重要。</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar Info -->
+            <div class="lg:col-span-4 space-y-8">
+                <!-- Warnings -->
+                <section class="card p-8 border-2 border-red-100 bg-red-50/50">
+                    <h3 class="font-bold text-xl mb-6 flex items-center gap-3 text-red-700">
+                        <i class="fas fa-exclamation-triangle"></i> 注意事項・不備対策
+                    </h3>
+                    <div class="content-area text-sm text-red-900/80">
+                        <ul>
+<li>採択通知書と交付決定通知書は同時発行しない</li>
+<li>交付決定通知書の確認前に事業を開始しないこと</li>
+<li>見積書提出時の不備は必ず期限内に解消すること</li>
+<li>申請要件を満たさない場合は採択取消の可能性あり</li>
+</ul>
+                    </div>
+                </section>
+
+                <!-- Action Plan -->
+                <section class="card p-8 border-2 border-blue-600 bg-blue-50/30">
+                    <h3 class="font-bold text-xl mb-6 flex items-center gap-3 text-blue-800">
+                        <i class="fas fa-rocket"></i> 次のアクション
+                    </h3>
+                    <div class="content-area text-sm text-blue-900 font-bold">
+                        <ul>
+<li>採択通知受領後、速やかに見積書等の提出準備</li>
+<li>提出書類の不備を確認、速やかに修正対応</li>
+<li>交付決定通知書の内容を確実に確認</li>
+<li>補助金事業開始前に交付決定通知書の到着を待つ</li>
+<li>事業報告および実績報告の準備を進める</li>
+</ul>
+                    </div>
+                </section>
+
+                <!-- Metadata -->
+                <div class="text-center">
+                    <a href="https://www.jizokukanb.com/jizokuka_r6h/doc/saitaku/17/【商工会地区】第17回_採択者リスト.pdf" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-slate-800 text-white rounded-full font-bold hover:bg-slate-700 transition-all shadow-lg">
+                        <i class="fas fa-external-link-alt"></i> 元資料を確認
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-20 py-10 border-t border-slate-200 text-center">
+            <p class="text-slate-400 text-xs font-bold tracking-widest uppercase mb-4">Generated by Advanced Agent-Python Flow</p>
+            <p class="text-slate-400 text-xs max-w-xl mx-auto">
+                本資料はAIエージェントによる自動解析によって生成されました。記載内容の正確性については万全を期しておりますが、最終的な判断は必ず公式の元資料をご確認ください。
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>見積書等の提出案内</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f1f5f9; color: #0f172a; }
+        .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        .card { background: white; border-radius: 1.5rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0; }
+        .accent-title { position: relative; display: inline-block; padding-bottom: 0.5rem; }
+        .accent-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40%; height: 4px; background: #3b82f6; border-radius: 2px; }
+        
+        /* Markdown Custom Styling */
+        .content-area h3 { font-size: 1.125rem; font-weight: 700; color: #1e40af; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .content-area p { margin-bottom: 1rem; line-height: 1.7; color: #334155; }
+        .content-area ul { list-style: none; padding-left: 0; margin-bottom: 1.25rem; }
+        .content-area li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; }
+        .content-area li::before { content: '•'; position: absolute; left: 0; color: #3b82f6; font-weight: bold; }
+        
+        /* Specific Layout Components */
+        .date-box { background: #eff6ff; border-left: 6px solid #2563eb; padding: 1.5rem; border-radius: 0.75rem; }
+        .expense-item { background: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; border-radius: 0.75rem; transition: all 0.2s; }
+        .expense-item:hover { border-color: #3b82f6; background: #f0f9ff; }
+        
+        .highlight-card { background: linear-gradient(to right, #ffffff, #f0f9ff); border-left: 8px solid #3b82f6; }
+    </style>
+</head>
+<body class="py-12 px-4 md:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="hero-gradient rounded-[2rem] p-8 md:p-12 mb-10 text-white shadow-2xl relative overflow-hidden">
+            <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="bg-white/20 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold tracking-widest border border-white/30 uppercase">Analysis Report</span>
+                    <span class="text-blue-100 text-xs">Update: 2026.01.30</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-black mb-6 leading-tight tracking-tight">見積書等の提出案内</h1>
+                <div class="flex flex-wrap gap-4">
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-2xl">
+                        <p class="text-blue-50 text-lg font-bold">「見積書の適正提出で補助金交付をスムーズに！」</p>
+                    </div>
+                </div>
+            </div>
+            <i class="fas fa-file-invoice-dollar absolute -right-16 -bottom-16 text-[20rem] text-white/5 rotate-12"></i>
+        </header>
+
+        <!-- Top Highlights: Summary & Dates -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+            <!-- Short Summary Card -->
+            <section class="card p-8 lg:col-span-2 highlight-card">
+                <h2 class="text-2xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                    <i class="fas fa-quote-left text-blue-500"></i> 資料の要点（30秒で把握）
+                </h2>
+                <div class="content-area text-lg text-slate-700 leading-relaxed">
+                    <p>小規模事業者対象の持続化補助金申請後、すべての経費に対し見積書等の提出が必須です。価格妥当性を審査し、交付決定に反映されます。遅延を避けるため早期提出を推奨し、２者以上の相見積もりや詳細な品名記載が求められます。</p>
+                </div>
+            </section>
+
+            <!-- Important Dates Card -->
+            <section class="card p-8 bg-slate-900 text-white border-none shadow-blue-900/20">
+                <h2 class="text-xl font-bold mb-6 flex items-center gap-3 text-blue-400">
+                    <i class="fas fa-calendar-check"></i> 重要日程
+                </h2>
+                <div class="space-y-4">
+                    <ul>
+<li>見積書提出後、審査期間は約1～2か月</li>
+<li>採択後速やかに見積書等を提出</li>
+</ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Period & Eligibility Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <!-- Period Box -->
+            <div class="date-box">
+                <h3 class="text-blue-800 font-black text-xl mb-4 flex items-center gap-2">
+                    <i class="fas fa-hourglass-half"></i> 実施・対象期間
+                </h3>
+                <div class="content-area text-blue-900 font-medium">
+                    <p>（記載なし）</p>
+                </div>
+            </div>
+            <!-- Eligibility Box -->
+            <div class="bg-emerald-50 border-l-6 border-emerald-500 p-6 rounded-xl">
+                <h3 class="text-emerald-800 font-black text-xl mb-4 flex items-center gap-2">
+                    <i class="fas fa-user-tag"></i> 申請対象・要件
+                </h3>
+                <div class="content-area text-emerald-900 text-sm">
+                    <ul>
+<li>小規模事業者持続化補助金＜一般型 通常枠＞の採択者</li>
+<li>発注総額100万円（税込）超の取引は２者以上の見積取得必須</li>
+<li>中古品購入は金額にかかわらず２者以上の見積もり必須</li>
+<li>住宅宿泊事業者の改装費は面積按分の根拠が必要</li>
+</ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Content Area -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <!-- Expenses Analysis (Main) -->
+            <div class="lg:col-span-8 space-y-10">
+                <section class="card p-8 md:p-10">
+                    <h2 class="accent-title text-2xl font-black mb-8 text-slate-800">補助対象経費の詳細</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="expense-item"><strong>見積書の必須記載事項</strong><br>発行日・書類の名称・補助事業者宛の宛名・発行者・見積金額（税抜／税込の明示）・具体的な品名と数量記載（中古品の場合は中古品である旨の記載必須）</div><div class="expense-item"><strong>店頭購入</strong><br>見積書の代わりに商品写真＋店頭価格が確認できる写真提出可</div><div class="expense-item"><strong>インターネット購入</strong><br>金額のわかる画面コピー等提出で代用可能</div><div class="expense-item"><strong>相見積もりの要件</strong><br>100万円超（税込）の取引および中古品の購入は必ず２者以上の見積もりを提出</div><div class="expense-item"><strong>住宅宿泊事業の改装費</strong><br>事業用部分の面積がわかる平面図等による面積按分の算出根拠提出必須</div>
+                    </div>
+                </section>
+
+                <section class="card p-8 md:p-10">
+                    <h2 class="accent-title text-2xl font-black mb-8 text-slate-800">重要項目の詳細解説</h2>
+                    <div class="content-area">
+                        <h3>見積書の必須記載事項</h3>
+<p>－ 発行日、書類名、補助事業者宛の宛名、発行者名、税込・税抜が明記された金額<br />
+－ 品名や数量を具体的に記載。「一式」「等」などの曖昧な表現は不可<br />
+－ 中古品の場合は「中古品」である旨を明示</p>
+<h3>相見積もりの必要性</h3>
+<p>－ 発注総額100万円（税込）超の取引には複数見積提出が必須<br />
+－ 中古品購入は金額に関わらず２者以上の見積が必要</p>
+<h3>店頭・インターネットでの購入証明</h3>
+<p>－ 店頭は商品写真と価格がわかる写真等で代替可<br />
+－ インターネットは購入価格の画面コピー等を提出可能</p>
+<h3>住宅宿泊事業の改装費の按分根拠</h3>
+<p>－ 事業に供する部分の面積を示す平面図等、算出根拠の提出が必須</p>
+<h3>審査期間と提出のタイミング</h3>
+<p>－ 見積書等の審査には1～2か月要する場合あり<br />
+－ 早めの提出が求められる</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar Info -->
+            <div class="lg:col-span-4 space-y-8">
+                <!-- Warnings -->
+                <section class="card p-8 border-2 border-red-100 bg-red-50/50">
+                    <h3 class="font-bold text-xl mb-6 flex items-center gap-3 text-red-700">
+                        <i class="fas fa-exclamation-triangle"></i> 注意事項・不備対策
+                    </h3>
+                    <div class="content-area text-sm text-red-900/80">
+                        <ul>
+<li>すべての経費に見積書等の提出必須</li>
+<li>曖昧な品名表記（「一式」「等」「他」）は禁止</li>
+<li>社会通念上妥当に見えない価格は補助対象外の可能性あり</li>
+<li>必ず補助事業者自身が業者から見積書を取得すること</li>
+<li>店舗・ネット購入には別途証明写真等が必要</li>
+<li>審査に時間がかかるため早期提出を推奨</li>
+</ul>
+                    </div>
+                </section>
+
+                <!-- Action Plan -->
+                <section class="card p-8 border-2 border-blue-600 bg-blue-50/30">
+                    <h3 class="font-bold text-xl mb-6 flex items-center gap-3 text-blue-800">
+                        <i class="fas fa-rocket"></i> 次のアクション
+                    </h3>
+                    <div class="content-area text-sm text-blue-900 font-bold">
+                        <ul>
+<li>採択後、全経費分の見積書を準備・提出</li>
+<li>100万円以上の取引及び中古品は必ず2者以上の見積もりを用意</li>
+<li>店頭購入は写真、ネット購入は画面コピーを用意</li>
+<li>住宅宿泊事業者は事業部分の面積根拠を作成</li>
+<li>見積書の必須記載事項を満たしているか事前に確認</li>
+<li>提出前に内容の修正があれば見積書等と共に再提出</li>
+</ul>
+                    </div>
+                </section>
+
+                <!-- Metadata -->
+                <div class="text-center">
+                    <a href="https://www.jizokukanb.com/jizokuka_r6h/doc/manual/r6_17/17_一般型通常枠_見積書等の提出案内.pdf" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-slate-800 text-white rounded-full font-bold hover:bg-slate-700 transition-all shadow-lg">
+                        <i class="fas fa-external-link-alt"></i> 元資料を確認
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-20 py-10 border-t border-slate-200 text-center">
+            <p class="text-slate-400 text-xs font-bold tracking-widest uppercase mb-4">Generated by Advanced Agent-Python Flow</p>
+            <p class="text-slate-400 text-xs max-w-xl mx-auto">
+                本資料はAIエージェントによる自動解析によって生成されました。記載内容の正確性については万全を期しておりますが、最終的な判断は必ず公式の元資料をご確認ください。
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

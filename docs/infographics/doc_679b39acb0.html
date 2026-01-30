@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公募要領(第5版)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f1f5f9; color: #0f172a; }
+        .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        .card { background: white; border-radius: 1.5rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0; }
+        .accent-title { position: relative; display: inline-block; padding-bottom: 0.5rem; }
+        .accent-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40%; height: 4px; background: #3b82f6; border-radius: 2px; }
+        
+        /* Markdown Custom Styling */
+        .content-area h3 { font-size: 1.125rem; font-weight: 700; color: #1e40af; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .content-area p { margin-bottom: 1rem; line-height: 1.7; color: #334155; }
+        .content-area ul { list-style: none; padding-left: 0; margin-bottom: 1.25rem; }
+        .content-area li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; }
+        .content-area li::before { content: '•'; position: absolute; left: 0; color: #3b82f6; font-weight: bold; }
+        
+        /* Specific Layout Components */
+        .date-box { background: #eff6ff; border-left: 6px solid #2563eb; padding: 1.5rem; border-radius: 0.75rem; }
+        .expense-item { background: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; border-radius: 0.75rem; transition: all 0.2s; }
+        .expense-item:hover { border-color: #3b82f6; background: #f0f9ff; }
+        
+        .highlight-card { background: linear-gradient(to right, #ffffff, #f0f9ff); border-left: 8px solid #3b82f6; }
+    </style>
+</head>
+<body class="py-12 px-4 md:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="hero-gradient rounded-[2rem] p-8 md:p-12 mb-10 text-white shadow-2xl relative overflow-hidden">
+            <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="bg-white/20 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold tracking-widest border border-white/30 uppercase">Analysis Report</span>
+                    <span class="text-blue-100 text-xs">Update: 2026.01.30</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-black mb-6 leading-tight tracking-tight">公募要領(第5版)</h1>
+                <div class="flex flex-wrap gap-4">
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-2xl">
+                        <p class="text-blue-50 text-lg font-bold">「小規模事業者の販路開拓と生産性向上を支援する最大350万円の補助金制度！」</p>
+                    </div>
+                </div>
+            </div>
+            <i class="fas fa-file-invoice-dollar absolute -right-16 -bottom-16 text-[20rem] text-white/5 rotate-12"></i>
+        </header>
+
+        <!-- Top Highlights: Summary & Dates -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+            <!-- Short Summary Card -->
+            <section class="card p-8 lg:col-span-2 highlight-card">
+                <h2 class="text-2xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                    <i class="fas fa-quote-left text-blue-500"></i> 資料の要点（30秒で把握）
+                </h2>
+                <div class="content-area text-lg text-slate-700 leading-relaxed">
+                    <p>本補助金は小規模事業者等が自社の経営計画に基づき販路開拓や業務効率化に取り組む費用の2/3を補助。補助上限は50万円に、インボイス・賃金引上げ特例で最大350万円まで上乗せ。電子申請で2026年3月6日開始、4月30日に締切。</p>
+                </div>
+            </section>
+
+            <!-- Important Dates Card -->
+            <section class="card p-8 bg-slate-900 text-white border-none shadow-blue-900/20">
+                <h2 class="text-xl font-bold mb-6 flex items-center gap-3 text-blue-400">
+                    <i class="fas fa-calendar-check"></i> 重要日程
+                </h2>
+                <div class="space-y-4">
+                    <ul>
+<li>公募要領公開：2026年1月28日</li>
+<li>申請受付開始：2026年3月6日（金）</li>
+<li>事業支援計画書発行受付締切：2026年4月16日（木）</li>
+<li>申請受付締切：2026年4月30日（木）17:00</li>
+<li>採択発表予定：2026年7月頃</li>
+<li>見積書等提出期限：2027年5月30日</li>
+<li>補助事業実施期間終了：2027年6月30日</li>
+</ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Period & Eligibility Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <!-- Period Box -->
+            <div class="date-box">
+                <h3 class="text-blue-800 font-black text-xl mb-4 flex items-center gap-2">
+                    <i class="fas fa-hourglass-half"></i> 実施・対象期間
+                </h3>
+                <div class="content-area text-blue-900 font-medium">
+                    <p>交付決定日から2027年6月30日までが補助事業実施期間。補助事業はこの期間内に必ず終了させること。</p>
+                </div>
+            </div>
+            <!-- Eligibility Box -->
+            <div class="bg-emerald-50 border-l-6 border-emerald-500 p-6 rounded-xl">
+                <h3 class="text-emerald-800 font-black text-xl mb-4 flex items-center gap-2">
+                    <i class="fas fa-user-tag"></i> 申請対象・要件
+                </h3>
+                <div class="content-area text-emerald-900 text-sm">
+                    <ul>
+<li>日本国内の小規模事業者（業種別の従業員数基準あり）または一定要件を満たす特定非営利活動法人</li>
+<li>資本金5億円以上の法人に100%株式を保有されていない法人</li>
+<li>直近3年間の課税所得の年平均が15億円以下</li>
+<li>過去の関連補助金事業で「事業効果報告書」を提出済みであること</li>
+<li>創業予定者は開業済みであること</li>
+<li>インボイス特例、賃金引上げ特例適用可（要件あり）</li>
+</ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Content Area -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <!-- Expenses Analysis (Main) -->
+            <div class="lg:col-span-8 space-y-10">
+                <section class="card p-8 md:p-10">
+                    <h2 class="accent-title text-2xl font-black mb-8 text-slate-800">補助対象経費の詳細</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="expense-item"><strong>機械装置等費</strong><br>販路開拓に必要な機械装置購入。中古品購入は単価50万円未満、2者以上からの見積必須。1件100万円超は複数見積 required。減価償却資産に該当し処分制限あり。事業用車両除く。</div><div class="expense-item"><strong>広報費</strong><br>販路開拓に関連するチラシ・パンフレット作成や発送、看板設置、新聞広告等。単なる企業PRや名刺は不可。動画制作費はウェブサイト費用に計上。</div><div class="expense-item"><strong>ウェブサイト関連費</strong><br>販路開拓のためのウェブサイトやECサイト開発、更新、SEO対策等。交付申請額の1/4まで（最大50万円）。50万円以上のサイトは処分制限あり。単独申請不可。</div><div class="expense-item"><strong>展示会等出展費</strong><br>出展料、通訳翻訳費、運搬費（レンタカー除く）。自社イベント会場借料は借料費で計上。国から助成されている費用は対象外。</div><div class="expense-item"><strong>旅費</strong><br>補助事業遂行に直接必要な交通費・宿泊費（詳細は別途資料参照）。</div><div class="expense-item"><strong>新商品開発費</strong><br>商品改良・開発に必要な費用。ただし製品単体の製造費用などは対象外。</div><div class="expense-item"><strong>借料</strong><br>イベント会場や機械設置スペース等の賃借料。</div><div class="expense-item"><strong>委託・外注費</strong><br>専門業者への業務委託費用。ただし高額なアドバイス料金には注意。</div>
+                    </div>
+                </section>
+
+                <section class="card p-8 md:p-10">
+                    <h2 class="accent-title text-2xl font-black mb-8 text-slate-800">重要項目の詳細解説</h2>
+                    <div class="content-area">
+                        <h3>インボイス特例</h3>
+<p>免税事業者が適格請求書発行事業者へ転換した場合、補助上限を50万円上乗せ。申請・実績報告で登録証明書の提出が必要。</p>
+<h3>賃金引上げ特例</h3>
+<p>補助事業期間中に最低賃金を50円以上引き上げた場合、補助率は最大3/4に上がり上乗せ150万円。赤字事業者は優先採択対象。申請・報告時の書類提出が必須。</p>
+<h3>補助対象及び対象外事業</h3>
+<p>本補助は販路開拓や業務効率化を目的。国の他補助金との重複は不可。射幸性の高い事業や公序良俗に反する事業、補助金申請前の未開業事業は対象外。</p>
+<h3>申請の流れ</h3>
+<p>GビズIDプライムアカウント取得→事業支援計画書発行依頼→電子申請→採択通知受領→見積書提出→交付決定→補助事業実施→実績報告→補助金交付→事業効果報告。詳細は公募要領参照。</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar Info -->
+            <div class="lg:col-span-4 space-y-8">
+                <!-- Warnings -->
+                <section class="card p-8 border-2 border-red-100 bg-red-50/50">
+                    <h3 class="font-bold text-xl mb-6 flex items-center gap-3 text-red-700">
+                        <i class="fas fa-exclamation-triangle"></i> 注意事項・不備対策
+                    </h3>
+                    <div class="content-area text-sm text-red-900/80">
+                        <ul>
+<li>審査により不採択や減額の可能性あり</li>
+<li>補助金は後払い、自己負担が必須</li>
+<li>虚偽申請や不当な支援料申請は厳罰対象</li>
+<li>GビズIDアカウントの共有禁止</li>
+<li>申請書類は必ず最新の要領に基づくこと</li>
+<li>創業型との重複申請禁止</li>
+<li>補助事業終了時に要件不適合は交付取り消し</li>
+<li>不正が疑われる場合は現地調査を実施</li>
+<li>申請締切後の事業支援計画書発行は不可</li>
+</ul>
+                    </div>
+                </section>
+
+                <!-- Action Plan -->
+                <section class="card p-8 border-2 border-blue-600 bg-blue-50/30">
+                    <h3 class="font-bold text-xl mb-6 flex items-center gap-3 text-blue-800">
+                        <i class="fas fa-rocket"></i> 次のアクション
+                    </h3>
+                    <div class="content-area text-sm text-blue-900 font-bold">
+                        <ul>
+<li>GビズIDプライムのアカウントを事前に取得する</li>
+<li>自社の小規模事業者要件を確認</li>
+<li>経営計画（様式2）の策定を始める</li>
+<li>地域の商工会・商工会議所に連絡し事業支援計画書（様式4）発行を依頼</li>
+<li>電子申請システムで申請手続きを行う</li>
+<li>インボイス特例・賃金引上げ特例の適用希望を検討し必要資料準備</li>
+<li>審査結果を待ち、採択後は見積書等必要書類を早期提出</li>
+<li>補助事業を計画通りに実施し、終了後実績報告書を提出</li>
+<li>事業効果報告書の提出も忘れずに実施</li>
+</ul>
+                    </div>
+                </section>
+
+                <!-- Metadata -->
+                <div class="text-center">
+                    <a href="https://www.jizokukanb.com/jizokuka_r6h/doc/kobo/r6_19/19_一般型_公募要領_第5版.pdf?28" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-slate-800 text-white rounded-full font-bold hover:bg-slate-700 transition-all shadow-lg">
+                        <i class="fas fa-external-link-alt"></i> 元資料を確認
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-20 py-10 border-t border-slate-200 text-center">
+            <p class="text-slate-400 text-xs font-bold tracking-widest uppercase mb-4">Generated by Advanced Agent-Python Flow</p>
+            <p class="text-slate-400 text-xs max-w-xl mx-auto">
+                本資料はAIエージェントによる自動解析によって生成されました。記載内容の正確性については万全を期しておりますが、最終的な判断は必ず公式の元資料をご確認ください。
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

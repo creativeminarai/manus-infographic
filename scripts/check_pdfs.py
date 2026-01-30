@@ -41,6 +41,11 @@ def get_pdf_links(url):
     try:
         response = requests.get(url, headers={'User-Agent': USER_AGENT}, timeout=15)
         response.raise_for_status()
+        
+        # エンコーディングを明示的に設定（chardetが失敗する場合に備え）
+        if response.encoding is None or response.encoding == 'ISO-8859-1':
+            response.encoding = response.apparent_encoding
+            
         soup = BeautifulSoup(response.text, 'html.parser')
         links = []
         for a in soup.find_all('a', href=True):
@@ -49,6 +54,12 @@ def get_pdf_links(url):
             if clean_href.lower().endswith('.pdf'):
                 full_url = urljoin(url, href)
                 text = a.get_text(strip=True) or os.path.basename(urlparse(full_url).path)
+                
+                # IT導入補助金の場合は公募要領のみに絞る
+                if 'it-shien.smrj.go.jp' in full_url:
+                    if 'koubo' not in full_url:
+                        continue
+                
                 links.append({'url': full_url, 'text': text})
         return links
     except Exception as e:
@@ -58,7 +69,6 @@ def get_pdf_links(url):
 def download_pdf_with_curl(url, filename, referer):
     path = os.path.join(DOWNLOAD_DIR, filename)
     try:
-        # curlにURLをそのまま渡す（リスト形式なのでシェルによる再解釈は防げる）
         cmd = [
             'curl', '-L', '-A', USER_AGENT,
             '-H', f'Referer: {referer}',
